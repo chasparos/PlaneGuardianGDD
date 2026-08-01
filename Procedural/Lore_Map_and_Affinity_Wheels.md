@@ -109,6 +109,10 @@ Life  <-> Death
 
 Life is not inherently good, and Death is not inherently evil. Example regions include ordered cultivation, wild adaptation, funerary inevitability, and entropic decay.
 
+Ethos uses one wheel-level Salience value. Complex cards may receive an optional Focus such as Order–Chaos, Life–Death, Holistic, Center, or Cycle. Focus narrows interpretation without multiplying the normal naming branches. High-Salience centered cards may become active Champions of Balance rather than merely indifferent.
+
+See [Ethos Wheel and Naming Vocabulary](Ethos_Wheel_and_Naming_Vocabulary.md).
+
 ### 3. World Relation
 
 Uses two axes:
@@ -258,6 +262,7 @@ WheelCoordinate:
   extremity: 0..65535
   salience: 0..65535
   relationshipMode: optional
+  focus: optional
   secondaryPoles: optional
 ```
 

@@ -18,3 +18,6 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0004 — Universes, Eras, and Eternal Cards](DD-0004-universes-eras-and-eternal-cards.md) — Accepted
 - [DD-0005 — Creative Stewardship of Unique Cards](DD-0005-creative-stewardship-of-unique-cards.md) — Accepted
 - [DD-0006 — Elemental Affinity Wheel](DD-0006-elemental-affinity-wheel.md) — Accepted
+- [DD-0007 — Ethos Salience and Focus](DD-0007-ethos-salience-and-focus.md) — Accepted
+- [DD-0008 — Leaders, Generals, and Force Construction](DD-0008-leaders-generals-and-force-construction.md) — Accepted
+- [DD-0009 — Asynchronous Objective Combat](DD-0009-asynchronous-objective-combat.md) — Accepted

@@ -132,8 +132,15 @@ persistent Pocket Planes.
 -   Facility
 -   Action
 -   Relic
--   Creature *(future)*
--   Event *(future)*
+-   Creature
+-   Hero
+-   Squad
+-   Event
+
+Leader is a capability rather than a separate card family. A Leader
+assigned to defense becomes the General; a Leader assigned to an attack
+becomes the Expedition Commander. Army and Formation are configured
+combat structures rather than card types.
 
 ## Card Axes
 
@@ -179,8 +186,16 @@ same profile so they describe a coherent artifact. Deliberate opposing
 affinities require a relationship such as Equilibrium, Synthesis,
 Conflict, Alternation, Suppression, or Paradox.
 
+Each wheel uses one Salience value. Complex cards may receive an optional
+Focus that narrows interpretation without becoming another independent
+naming branch. Ethos Focus may emphasize Order--Chaos, Life--Death, the
+complete wheel, the center, or cycles among its regions.
+
 See [Lore Map and Affinity
 Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
+
+See [Ethos Wheel and Naming
+Vocabulary](../Procedural/Ethos_Wheel_and_Naming_Vocabulary.md).
 
 Elemental Affinity uses four oppositions: Radiance--Shadow,
 Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
@@ -231,6 +246,11 @@ The order of placement determines position.
 
 Future systems will introduce adjacency bonuses and regional effects.
 
+Every Plane Seed contains a Rift through which attackers, thieves,
+traders, and guests enter. The Guardian configures a standing defensive
+army around the Rift so combat can resolve without the player being
+online.
+
 ------------------------------------------------------------------------
 
 # 8. Resource Economy
@@ -270,6 +290,36 @@ Examples:
 -   Exploration
 -   Combat
 -   Diplomacy
+
+## Combat Actions
+
+An attack requires an Action card and an Expedition Commander. The
+Action determines the objective, attacking capacity, success threshold,
+payoff or consequence, cooldown, and special rules. Possible objectives
+include probing, raiding, harassment, sabotage, pillage, assault, and
+siege.
+
+Attack and defense use the same planning concepts: commander, formation,
+tactical zones, troops, reserves, support, and Battle Events. A large
+economy can sustain greater defensive capacity, but card quality,
+synergy, command, and deployment determine effectiveness.
+
+Tactical victory, attrition, and objective completion are separate
+results. A Harassment attack may award no plunder while extending the
+cooldowns of defeated defenders to prepare for a later Pillage.
+
+Combat snapshots the configured defense when declared. Defeated cards
+enter real-world cooldown. A deployed defender on cooldown remains
+assigned to its slot and cannot be replaced until ready. Online players
+may react to completed battles and prepare for later attacks, but cannot
+alter an attack already underway or erase attrition by cycling cards.
+
+The Action Deck supports different play rhythms: active players may use
+frequent short-cooldown attacks with small payoffs, while occasional
+players may select longer-cooldown Actions with greater capacity and
+payoff. Balance should target comparable opportunity over real time.
+
+See [Combat and Raiding](Combat_and_Raiding.md).
 
 ------------------------------------------------------------------------
 
@@ -389,11 +439,27 @@ deterministic mechanics and fallback presentation remain intact.
 Eight foundational elements form four oppositions. Compound phenomena
 and harmful conditions derive from affinities and other semantic wheels.
 
+## [DD-0007 --- Ethos Salience and Focus](../Decisions/DD-0007-ethos-salience-and-focus.md)
+
+Each wheel retains one Salience value; exceptional cards may use an
+optional Focus to create perceptible axis-specific identity.
+
+## [DD-0008 --- Leaders, Generals, and Force Construction](../Decisions/DD-0008-leaders-generals-and-force-construction.md)
+
+Leader is a card capability, General and Expedition Commander are
+assignments, and armies are configured forces constrained by capacity.
+
+## [DD-0009 --- Asynchronous Objective Combat](../Decisions/DD-0009-asynchronous-objective-combat.md)
+
+Attacks resolve against standing defenses with separate tactical,
+attrition, and objective results; committed cards cannot be replaced
+while on cooldown.
+
 ------------------------------------------------------------------------
 
 # 15. Open Questions
 
--   Combat
+-   Detailed combat turns, formations, targeting, and Breach calculation
 -   Trading
 -   Crafting
 -   Creature system
