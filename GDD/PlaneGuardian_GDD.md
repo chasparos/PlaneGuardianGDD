@@ -26,10 +26,11 @@
 8.  Resource Economy
 9.  Action Layer
 10. Time & Simulation
-11. Technical Philosophy
-12. Design Principles
-13. Design Decisions
-14. Open Questions
+11. Universes, Eras & Eternal Cards
+12. Technical Philosophy
+13. Design Principles
+14. Design Decisions
+15. Open Questions
 
 ------------------------------------------------------------------------
 
@@ -152,6 +153,65 @@ Measures practical performance.
 
 Determines the procedural design budget available to the generator.
 
+## Semantic Profile
+
+Each card receives a deterministic semantic profile from the shared
+**Lore Map**. Applicable affinity wheels contribute a direction,
+Extremity, and independent Salience value. Extremity describes how far
+the card lies from a wheel's center; Salience describes how important
+that wheel is to the card.
+
+The initial semantic families are:
+
+-   Elemental Affinity
+-   Ethos: Order--Chaos and Life--Death
+-   World Relation: Preservation--Transformation and
+    Creation--Annihilation
+-   Cosmic Provenance: Divine--Infernal
+-   Magical Tradition: Arcane--Primal and Controlled--Instinctive
+-   Manifestation: Material--Ethereal and Rooted--Wandering
+
+Not every wheel influences every card. Card family and context determine
+relevance, while Complexity determines how many influences or tensions
+become visible. Mechanics, procedural names, art, and lore consume the
+same profile so they describe a coherent artifact. Deliberate opposing
+affinities require a relationship such as Equilibrium, Synthesis,
+Conflict, Alternation, Suppression, or Paradox.
+
+See [Lore Map and Affinity
+Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
+
+## Origins and Discovery Sources
+
+Players discover cards by supplying sources such as summoning phrases,
+locations, crafted formulas, divinations, or arbitrary text. The same
+canonical source and source type resolve to the same card during an Era
+while copies remain available.
+
+The server protects the mapping from source text to Origin ID so players
+cannot mine desirable cards offline. The Origin ID still reconstructs
+the complete card deterministically. A separate authoritative ledger
+enforces global supply and per-account copy limits.
+
+Knowledge of a productive source may be shared with friends or guilds.
+An exhausted source can no longer issue copies, including after a unique
+card has been claimed.
+
+See [Card Origins and Protected
+Discovery](../Procedural/Card_Origins_and_Protected_Discovery.md).
+
+## Creative Layer
+
+The first discoverer of a unique card receives the right to nominate its
+display name and may propose artwork. Every unique card retains a
+deterministic fallback presentation. Player contributions affect
+presentation only and require provenance, review, reporting,
+moderation, and appeal.
+
+Discoverer, creative contributor, and current owner remain distinct in
+the card's permanent history. Approved names and artwork may survive
+across Eras if the card becomes Eternal.
+
 ------------------------------------------------------------------------
 
 # 7. Plane Construction
@@ -225,7 +285,36 @@ No Plane is continuously simulated.
 
 ------------------------------------------------------------------------
 
-# 11. Technical Philosophy
+# 11. Universes, Eras & Eternal Cards
+
+A **Universe** is a persistent historical lineage. An **Era** is a reset
+cycle within that Universe. Universe and Era identifiers contribute to
+protected source generation, so the same source may reveal different
+cards in different Eras or Universes.
+
+At an Era's Reckoning, its results are locked and preserved in a
+read-only Hall of Fame. Ordinary active state resets or becomes Legacy
+history.
+
+**Eternal** is a lifecycle axis independent of rarity and quality.
+Eternal cards preserve identity, mechanics, provenance, approved name,
+approved art, and history across Eras. Eternity preserves identity, not
+power: promotion never rerolls or strengthens a card.
+
+Paths to Eternity include:
+
+-   Born Eternal
+-   Ascended through an Era achievement or limited choice
+-   Consecrated through an extraordinary collaborative ritual
+-   Honored for historical or community-recognized significance
+
+Each Era has a limited Eternal Budget. Eternal cards reside in an
+Eternal Vault and only a limited number may awaken in a new Era, keeping
+fresh starts meaningful.
+
+------------------------------------------------------------------------
+
+# 12. Technical Philosophy
 
 The game favors deterministic systems.
 
@@ -236,7 +325,7 @@ cooldowns, inventories, and timestamps.
 
 ------------------------------------------------------------------------
 
-# 12. Design Principles
+# 13. Design Principles
 
 ## Discovery
 
@@ -256,9 +345,9 @@ Players should never completely understand the procedural universe.
 
 ------------------------------------------------------------------------
 
-# 13. Design Decisions
+# 14. Design Decisions
 
-## DD-0001 --- Deterministic Cards
+## [DD-0001 --- Deterministic Cards](../Decisions/DD-0001-deterministic-cards.md)
 
 Every card must be reconstructable from its GUID(s).
 
@@ -269,18 +358,40 @@ Reason:
 -   Infinite procedural variety
 -   Consistent generation
 
+## [DD-0002 --- Semantic Lore Map](../Decisions/DD-0002-semantic-lore-map.md)
+
+Mechanics, names, art, and lore consume one versioned semantic profile.
+
+## [DD-0003 --- Protected Source-Based Discovery](../Decisions/DD-0003-protected-source-discovery.md)
+
+Player-provided sources map to deterministic cards through a protected,
+server-authoritative origin process.
+
+## [DD-0004 --- Universes, Eras, and Eternal Cards](../Decisions/DD-0004-universes-eras-and-eternal-cards.md)
+
+Eras provide renewal, Universes provide continuity, and Eternal cards
+provide memory without receiving promotion power.
+
+## [DD-0005 --- Creative Stewardship of Unique Cards](../Decisions/DD-0005-creative-stewardship-of-unique-cards.md)
+
+Unique-card discoverers may nominate reviewed presentation while
+deterministic mechanics and fallback presentation remain intact.
+
 ------------------------------------------------------------------------
 
-# 14. Open Questions
+# 15. Open Questions
 
 -   Combat
 -   Trading
 -   Crafting
 -   Creature system
--   Procedural naming
+-   Elemental wheel sectors
+-   Naming lexicon and cultural grammars
 -   Ability generation
 -   Multiplayer
 -   Procedural art
+-   Eternal Budget and awakening limits
+-   Era reset boundaries
 
 ------------------------------------------------------------------------
 
