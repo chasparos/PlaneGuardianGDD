@@ -228,6 +228,21 @@ times or cooldowns.
 See [Magical Tradition Wheel and
 Flavor](../Procedural/Magical_Tradition_Wheel_and_Flavor.md).
 
+Cosmic Provenance describes the greater authority, realm, or lineage from
+which a card derives identity. Divine and Infernal are provenance rather
+than morality. Its exact center is Worldly or Unaligned: independence from
+both Heaven and Hell may itself be highly salient.
+
+Each Universe generates an asymmetric cosmology. Its pantheon is a
+relational wheel or network of gods with strong Lore Map profiles,
+oppositions, alliances, offices, and domains. Hell is a hierarchy of
+inherited, specialized, contested, and usurped authority. Associated cards
+combine their own identity with a relationship-weighted influence from a
+god or infernal rather than becoming copies of that patron.
+
+See [Cosmic Provenance and
+Cosmology](../Procedural/Cosmic_Provenance_and_Cosmology.md).
+
 Elemental Affinity uses four oppositions: Radiance--Shadow,
 Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
 and Magma derive from multiple affinities. Physical and Spiritual are
@@ -502,6 +517,13 @@ elemental resonance.
 Arcane--Primal and Controlled--Instinctive describe the method by which
 an effect is accomplished. Their exact center is deliberately Mundane and
 trades supernatural shortcuts for labor and time.
+
+## [DD-0013 --- Cosmic Provenance and Cosmology](../Decisions/DD-0013-cosmic-provenance-and-cosmology.md)
+
+Divine--Infernal provenance opens into a Universe-seeded relational
+pantheon and hierarchical Hell, with Worldly or Unaligned identity at the
+center. Cosmological powers inhabit and influence the Lore Map rather than
+defining it.
 
 ------------------------------------------------------------------------
 

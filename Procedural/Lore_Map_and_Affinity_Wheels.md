@@ -1,7 +1,7 @@
 # Lore Map and Affinity Wheels
 
 - **Status:** Foundational design
-- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md), [DD-0012](../Decisions/DD-0012-magical-tradition-wheel.md)
+- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md), [DD-0012](../Decisions/DD-0012-magical-tradition-wheel.md), [DD-0013](../Decisions/DD-0013-cosmic-provenance-and-cosmology.md)
 - **Related document:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
 
 ## Purpose
@@ -134,7 +134,9 @@ Uses the axis:
 Divine <-> Infernal
 ```
 
-This describes provenance, not morality. Divine beings may be tyrannical, while Infernal beings may be honorable or protective. Mortal, natural, arcane, or unaligned concepts occupy the center. A future second axis such as Covenant–Sovereignty may be added if testing shows that the single axis is insufficient.
+This describes greater cosmological lineage or authority, not morality. Divine beings may be tyrannical, while Infernal beings may be honorable or protective. The exact center is Worldly or Unaligned provenance: mortal, natural, arcane, self-wrought, or otherwise independent of Heaven and Hell.
+
+The axis opens into two Universe-seeded structures. The pantheon is a relational wheel or network of gods whose strong Lore Map profiles create alliances, rivalries, and oppositions. Hell is a hierarchy whose infernals inherit, specialize, contest, and usurp authority. Gods and infernals are generated as powerful inhabitants of the Lore Map; they do not redefine it. See [Cosmic Provenance and Cosmology](Cosmic_Provenance_and_Cosmology.md).
 
 ### 5. Magical Tradition
 
@@ -283,4 +285,5 @@ The final encoding, sampling distributions, and deterministic trigonometric impl
 - Card-family relevance matrices.
 - Complexity costs for secondary poles and relationship modes.
 - Lexicon schema, cultural naming grammars, and localization.
-- Whether Covenant–Sovereignty should become a second Cosmic Provenance axis.
+- Exact pantheon sizing, opposition rules, and infernal rank vocabulary.
+- How cosmological offices and hierarchies change between Eras.

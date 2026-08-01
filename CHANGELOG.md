@@ -25,6 +25,9 @@ All notable documentation changes are recorded here.
 - Defined Magical Tradition as Artifice, Sorcery, Ritual, and Wilding around a deliberately Mundane center.
 - Established the Mundane tendency toward lower exotic-resource costs and longer completion times or cooldowns.
 - Added design decision DD-0012.
+- Defined Cosmic Provenance as a Divine--Infernal axis with a Worldly or Unaligned center.
+- Established a Universe-seeded relational pantheon, hierarchical Hell, and relationship-weighted influence on associated cards.
+- Added design decision DD-0013, completing the initial definitions of all six semantic wheels.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01

@@ -24,3 +24,4 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0010 — World Relation Wheel](DD-0010-world-relation-wheel.md) — Accepted
 - [DD-0011 — Manifestation Wheel](DD-0011-manifestation-wheel.md) — Accepted
 - [DD-0012 — Magical Tradition Wheel](DD-0012-magical-tradition-wheel.md) — Accepted
+- [DD-0013 — Cosmic Provenance and Cosmology](DD-0013-cosmic-provenance-and-cosmology.md) — Accepted
