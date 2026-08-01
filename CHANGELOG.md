@@ -20,6 +20,8 @@ All notable documentation changes are recorded here.
 - Added design decisions DD-0007 through DD-0009.
 - Defined the World Relation wheel, its Restoration, Genesis, Excision, and Dissolution regions, and its flavor boundaries.
 - Added design decision DD-0010.
+- Defined the Manifestation wheel, its Foundation, Imprint, Pilgrimage, and Drift regions, and its separation from elemental Earth--Aether.
+- Added design decision DD-0011.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01

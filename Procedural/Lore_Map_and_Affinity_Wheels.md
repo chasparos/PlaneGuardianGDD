@@ -1,7 +1,7 @@
 # Lore Map and Affinity Wheels
 
 - **Status:** Foundational design
-- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md)
+- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md)
 - **Related document:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
 
 ## Purpose
@@ -152,11 +152,13 @@ This distinguishes calculated wizardry, structured primal ritual, instinctive so
 Uses two axes:
 
 ```text
-Material <-> Ethereal
-Rooted   <-> Wandering
+Embodied    <-> Incorporeal
+Rooted      <-> Wandering
 ```
 
-This distinguishes fortresses, mountains, shrines, hauntings, caravans, migrating creatures, dreams, and astral currents.
+This describes how and where a card exists. Embodied–Incorporeal measures dependence on a stable physical form; Rooted–Wandering measures dependence on a particular locus, host, source, or anchor. It distinguishes foundations, imprints, pilgrims, hauntings, caravans, migrating creatures, dreams, and astral currents.
+
+Earth–Aether describes elemental resonance, not manifestation. Earth does not require embodiment, and Aether does not require incorporeality. See [Manifestation Wheel and Flavor](Manifestation_Wheel_and_Flavor.md).
 
 ## Wheel coordinate model
 

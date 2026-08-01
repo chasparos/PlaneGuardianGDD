@@ -177,7 +177,7 @@ The initial semantic families are:
     Creation--Annihilation
 -   Cosmic Provenance: Divine--Infernal
 -   Magical Tradition: Arcane--Primal and Controlled--Instinctive
--   Manifestation: Material--Ethereal and Rooted--Wandering
+-   Manifestation: Embodied--Incorporeal and Rooted--Wandering
 
 Not every wheel influences every card. Card family and context determine
 relevance, while Complexity determines how many influences or tensions
@@ -206,6 +206,16 @@ automatically Annihilation or Creation.
 
 See [World Relation Wheel and
 Flavor](../Procedural/World_Relation_Wheel_and_Flavor.md).
+
+Manifestation describes how and where a card exists: whether its presence
+is Embodied or Incorporeal, and whether it is Rooted or Wandering. Its
+primary regions are Foundation, Imprint, Pilgrimage, and Drift.
+Earth--Aether remains an elemental opposition: Earth does not require an
+embodied or rooted presence, and Aether does not require an incorporeal or
+wandering one.
+
+See [Manifestation Wheel and
+Flavor](../Procedural/Manifestation_Wheel_and_Flavor.md).
 
 Elemental Affinity uses four oppositions: Radiance--Shadow,
 Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
@@ -469,6 +479,12 @@ while on cooldown.
 
 Preservation--Transformation and Creation--Annihilation describe how a
 card maintains, changes, creates, or removes identities and existence.
+
+## [DD-0011 --- Manifestation Wheel](../Decisions/DD-0011-manifestation-wheel.md)
+
+Embodied--Incorporeal and Rooted--Wandering describe how a card is
+present and what binds that presence to the world, independently of its
+elemental resonance.
 
 ------------------------------------------------------------------------
 
