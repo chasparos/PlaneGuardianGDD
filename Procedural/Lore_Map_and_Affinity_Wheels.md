@@ -1,7 +1,7 @@
 # Lore Map and Affinity Wheels
 
 - **Status:** Foundational design
-- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md)
+- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md)
 - **Related document:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
 
 ## Purpose
@@ -37,6 +37,66 @@ Version 0.1 begins with six semantic families. Their exact sectors, vocabulary, 
 ### 1. Elemental Affinity
 
 Represents elemental identity and relationships. It may influence damage, resistance, resource production and consumption, environment, art, abilities, and naming.
+
+The wheel contains eight foundational elements arranged in this circular order:
+
+```text
+Radiance -> Fire -> Air -> Aether
+    ^                         |
+    |                         v
+Earth <- Water <- Ice <- Shadow
+```
+
+Elements across the center form four oppositions:
+
+| Element | Opposite | Fundamental tension |
+| --- | --- | --- |
+| Radiance | Shadow | Revelation–concealment |
+| Fire | Ice | Heat–stillness |
+| Air | Water | Ascent–depth and diffusion–cohesion |
+| Earth | Aether | Matter–spirit and embodiment–transcendence |
+
+These oppositions describe tension rather than morality. Radiance is not inherently good, and Shadow is not inherently evil. Ethos and Cosmic Provenance determine purpose and moral interpretation.
+
+Earth replaces the overly broad idea of Physical as an element. It represents substance, weight, structure, and embodiment. Aether replaces Spiritual as an element and represents incorporeality, magical medium, and transcendence. Aether is an affinity; Astral Essence remains the resource that sustains planar reality.
+
+#### Compounds and derived manifestations
+
+Foundational elements may combine with each other and with other semantic wheels. Derived manifestations are reproducible outcomes, not additional foundational sectors.
+
+| Manifestation | Typical semantic ingredients |
+| --- | --- |
+| Lightning | Fire + Air |
+| Magma | Fire + Earth |
+| Steam | Fire + Water |
+| Mist | Water + Air |
+| Crystal | Earth + Radiance, often with Order |
+| Void | Aether + Shadow, possibly Annihilation |
+| Necrotic energy | Shadow + Death |
+| Spirit flame | Fire + Aether |
+| Corrosion | Water + Earth + Transformation |
+| Holy fire | Fire + Radiance + Divine |
+| Hellfire | Fire + Infernal |
+| Dream | Aether with Shadow or Radiance, expressed Ethereally |
+
+Opposed elements may still combine when the card receives an appropriate relationship mode. Mist, for example, can express a Water–Air Synthesis. Such combinations consume complexity budget when they create a meaningful dual identity.
+
+Poison, disease, and decay are effect families rather than foundational elements:
+
+- **Poison** is a harmful material or spiritual substance whose elemental origin may vary.
+- **Disease** is a transmissible process shaped primarily by Life–Death, often with Primal and Material influence.
+- **Decay** is a process associated with Death and Transformation or Annihilation, sometimes reinforced by Shadow.
+
+#### Affinity and effect delivery
+
+Elemental affinity must remain separate from how an effect reaches and changes a target. An effect may independently define:
+
+1. **Affinity:** Fire, Ice, Aether, or another elemental combination.
+2. **Delivery:** physical, elemental, spiritual, or mental.
+3. **Form:** slashing, piercing, impact, beam, wave, aura, or another geometry.
+4. **Condition:** burning, frozen, shocked, poisoned, diseased, decaying, or another persistent state.
+
+For example, Lightning Spear may use Fire–Air affinity, Elemental delivery, Piercing and Chained forms, and the Shocked condition. Spectral Talons may use Aether–Shadow affinity, Spiritual delivery, Slashing form, and a Soul Bleed condition.
 
 ### 2. Ethos
 
@@ -205,7 +265,9 @@ The final encoding, sampling distributions, and deterministic trigonometric impl
 
 ## Open questions
 
-- Exact sectors and adjacency of the Elemental wheel.
+- Exact angular width and boundary behavior of Elemental sectors.
+- Thresholds and complexity costs for compound manifestations.
+- Resistance rules for affinity, delivery, form, and condition layers.
 - Sampling distribution for Salience and Extremity.
 - Card-family relevance matrices.
 - Complexity costs for secondary poles and relationship modes.

@@ -12,6 +12,8 @@ All notable documentation changes are recorded here.
 - Defined protected source-based card discovery, limited-copy claims, Universes, Eras, the Hall of Fame, and Eternal-card promotion paths.
 - Added community-reviewed creative stewardship for unique-card names and artwork.
 - Added design decisions DD-0002 through DD-0005.
+- Defined the eight-element affinity wheel, its four oppositions, compound manifestations, and the distinction between affinity, delivery, form, and condition.
+- Added design decision DD-0006.
 
 ## 0.1 - 2026-08-01
 

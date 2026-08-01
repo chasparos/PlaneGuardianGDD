@@ -163,7 +163,8 @@ that wheel is to the card.
 
 The initial semantic families are:
 
--   Elemental Affinity
+-   Elemental Affinity: Radiance, Fire, Air, Aether, Shadow, Ice,
+    Water, and Earth
 -   Ethos: Order--Chaos and Life--Death
 -   World Relation: Preservation--Transformation and
     Creation--Annihilation
@@ -180,6 +181,12 @@ Conflict, Alternation, Suppression, or Paradox.
 
 See [Lore Map and Affinity
 Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
+
+Elemental Affinity uses four oppositions: Radiance--Shadow,
+Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
+and Magma derive from multiple affinities. Physical and Spiritual are
+effect-delivery modes rather than elements; Poison, Disease, and Decay
+are generated effect families rather than foundational sectors.
 
 ## Origins and Discovery Sources
 
@@ -377,6 +384,11 @@ provide memory without receiving promotion power.
 Unique-card discoverers may nominate reviewed presentation while
 deterministic mechanics and fallback presentation remain intact.
 
+## [DD-0006 --- Elemental Affinity Wheel](../Decisions/DD-0006-elemental-affinity-wheel.md)
+
+Eight foundational elements form four oppositions. Compound phenomena
+and harmful conditions derive from affinities and other semantic wheels.
+
 ------------------------------------------------------------------------
 
 # 15. Open Questions
@@ -385,7 +397,7 @@ deterministic mechanics and fallback presentation remain intact.
 -   Trading
 -   Crafting
 -   Creature system
--   Elemental wheel sectors
+-   Elemental sector widths and boundary behavior
 -   Naming lexicon and cultural grammars
 -   Ability generation
 -   Multiplayer

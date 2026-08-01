@@ -17,3 +17,4 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0003 — Protected Source-Based Discovery](DD-0003-protected-source-discovery.md) — Accepted
 - [DD-0004 — Universes, Eras, and Eternal Cards](DD-0004-universes-eras-and-eternal-cards.md) — Accepted
 - [DD-0005 — Creative Stewardship of Unique Cards](DD-0005-creative-stewardship-of-unique-cards.md) — Accepted
+- [DD-0006 — Elemental Affinity Wheel](DD-0006-elemental-affinity-wheel.md) — Accepted
