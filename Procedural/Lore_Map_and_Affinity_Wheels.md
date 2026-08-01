@@ -1,7 +1,7 @@
 # Lore Map and Affinity Wheels
 
 - **Status:** Foundational design
-- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md)
+- **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md), [DD-0012](../Decisions/DD-0012-magical-tradition-wheel.md)
 - **Related document:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
 
 ## Purpose
@@ -145,7 +145,9 @@ Arcane     <-> Primal
 Controlled <-> Instinctive
 ```
 
-This distinguishes calculated wizardry, structured primal ritual, instinctive sorcery, and untamed natural power.
+This describes how an effect is accomplished. Its regions distinguish calculated Artifice, structured Ritual, instinctive Sorcery, and untamed Wilding. The exact center is Mundane: work performed through labor, tools, training, logistics, patience, and time rather than supernatural technique. A highly salient center makes mundanity part of the card's identity; low Salience means that method is irrelevant.
+
+Mundane effects tend to require fewer magical or exotic resources but take longer to complete or recover from. This is a balancing tendency, not a universal cost formula. See [Magical Tradition Wheel and Flavor](Magical_Tradition_Wheel_and_Flavor.md).
 
 ### 6. Manifestation
 

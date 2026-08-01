@@ -217,6 +217,17 @@ wandering one.
 See [Manifestation Wheel and
 Flavor](../Procedural/Manifestation_Wheel_and_Flavor.md).
 
+Magical Tradition describes how an effect is accomplished. Artifice uses
+controlled Arcane method, Sorcery uses instinctive Arcane power, Ritual
+uses controlled Primal tradition, and Wilding expresses instinctive Primal
+power. Its exact center is Mundane: labor, craft, discipline, ingenuity,
+and time achieve the result without supernatural technique. Mundane effects
+tend to trade lower magical or exotic resource costs for longer completion
+times or cooldowns.
+
+See [Magical Tradition Wheel and
+Flavor](../Procedural/Magical_Tradition_Wheel_and_Flavor.md).
+
 Elemental Affinity uses four oppositions: Radiance--Shadow,
 Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
 and Magma derive from multiple affinities. Physical and Spiritual are
@@ -485,6 +496,12 @@ card maintains, changes, creates, or removes identities and existence.
 Embodied--Incorporeal and Rooted--Wandering describe how a card is
 present and what binds that presence to the world, independently of its
 elemental resonance.
+
+## [DD-0012 --- Magical Tradition Wheel](../Decisions/DD-0012-magical-tradition-wheel.md)
+
+Arcane--Primal and Controlled--Instinctive describe the method by which
+an effect is accomplished. Their exact center is deliberately Mundane and
+trades supernatural shortcuts for labor and time.
 
 ------------------------------------------------------------------------
 

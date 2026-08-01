@@ -22,6 +22,9 @@ All notable documentation changes are recorded here.
 - Added design decision DD-0010.
 - Defined the Manifestation wheel, its Foundation, Imprint, Pilgrimage, and Drift regions, and its separation from elemental Earth--Aether.
 - Added design decision DD-0011.
+- Defined Magical Tradition as Artifice, Sorcery, Ritual, and Wilding around a deliberately Mundane center.
+- Established the Mundane tendency toward lower exotic-resource costs and longer completion times or cooldowns.
+- Added design decision DD-0012.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01
