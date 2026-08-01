@@ -1,6 +1,9 @@
 # Generated repository handoff archive
 /repository_snapshot.zip
 
+# Downloaded patch handoff artifacts
+/*.patch
+
 # Local editor and operating-system files
 .DS_Store
 Thumbs.db

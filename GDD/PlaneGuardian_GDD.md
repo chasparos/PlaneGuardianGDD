@@ -197,6 +197,16 @@ Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
 See [Ethos Wheel and Naming
 Vocabulary](../Procedural/Ethos_Wheel_and_Naming_Vocabulary.md).
 
+World Relation supplies procedural verbs and consequences. Preservation
+maintains identity, Transformation changes it, Creation brings something
+new into existence, and Annihilation removes something from existence.
+Its primary regions are Restoration, Genesis, Excision, and Dissolution.
+Death, decay, ordinary destruction, and transportation are not
+automatically Annihilation or Creation.
+
+See [World Relation Wheel and
+Flavor](../Procedural/World_Relation_Wheel_and_Flavor.md).
+
 Elemental Affinity uses four oppositions: Radiance--Shadow,
 Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
 and Magma derive from multiple affinities. Physical and Spiritual are
@@ -454,6 +464,11 @@ assignments, and armies are configured forces constrained by capacity.
 Attacks resolve against standing defenses with separate tactical,
 attrition, and objective results; committed cards cannot be replaced
 while on cooldown.
+
+## [DD-0010 --- World Relation Wheel](../Decisions/DD-0010-world-relation-wheel.md)
+
+Preservation--Transformation and Creation--Annihilation describe how a
+card maintains, changes, creates, or removes identities and existence.
 
 ------------------------------------------------------------------------
 

@@ -34,21 +34,29 @@ Use this collaboration sequence:
 4. Treat the uploaded snapshot as the immutable patch baseline. Make the agreed edits in the working copy.
 5. Validate Markdown links, filenames, decision numbering, and the relationship between the main GDD and supporting documents.
 6. Produce one Git-compatible unified patch relative to the repository root. The patch must not contain `repository_snapshot.zip`, `.git/`, editor state, or unrelated generated files.
-7. Provide the patch as a downloadable file. Also provide the current `Apply-PlaneGuardianPatch.ps1` helper when it is not already available to the user or when the helper itself changes.
-8. In the final response, always include an exact, copy/pasteable PowerShell command that calls the patch-sequence helper with the exact downloaded patch filename. Assume the script and patch have been copied into the repository root and the command is run there. Use this form:
+7. Provide the patch as a downloadable file.
+8. In the final response, always include an exact, copy/pasteable PowerShell sequence with the exact downloaded patch filename and a descriptive commit message. Assume the patch has been copied into the repository root and the commands are run there. Use this form:
 
    ```powershell
-   ./Apply-PlaneGuardianPatch.ps1 -PatchPath "<exact-patch-filename>.patch"
+   git apply --ignore-space-change --check "./<exact-patch-filename>.patch"
+   git apply --ignore-space-change --index "./<exact-patch-filename>.patch"
+   git rm --cached --ignore-unmatch -- "*.patch" repository_snapshot.zip
+   git status --short
+   git commit -m "<descriptive commit message>"
+
+   $snapshotTemp = Join-Path $env:TEMP "PlaneGuardian-repository_snapshot.zip"
+   git archive --format=zip --output="$snapshotTemp" HEAD
+   Move-Item -LiteralPath $snapshotTemp -Destination "./repository_snapshot.zip" -Force
    ```
 
 9. Briefly summarize what the patch changes and mention any validation that could not be performed.
 
-The PowerShell helper applies and stages the patch, untracks the generated snapshot archive if necessary, commits the staged changes, and creates a fresh `repository_snapshot.zip` from `HEAD`.
+The sequence checks and stages the patch with CRLF/LF tolerance, untracks downloaded patches and generated snapshots if necessary, commits the staged changes, and creates a fresh `repository_snapshot.zip` from `HEAD`.
 
 ## Patch requirements
 
 - Generate patches with paths prefixed by `a/` and `b/` so `git apply` works from the repository root.
 - Include moves as Git-recognizable renames when possible.
-- Ensure `git apply --check <patch>` succeeds against the uploaded snapshot baseline.
+- Ensure `git apply --ignore-space-change --check <patch>` succeeds against both the uploaded snapshot baseline and an LF-normalized copy.
 - Keep each patch focused on the requested change.
 - Never include secrets, local absolute paths, or machine-specific configuration.

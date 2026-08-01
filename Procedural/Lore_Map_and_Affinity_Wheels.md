@@ -124,6 +124,8 @@ Creation     <-> Annihilation
 
 This wheel describes how a card relates to existence and change. Its regions include restoration, invention, purification through sacrifice, and dissolution. Destruction may appear as a process within Transformation; Annihilation means erasure rather than ordinary damage.
 
+Ethos describes the state a card values; World Relation describes how it changes reality to pursue that value. See [World Relation Wheel and Flavor](World_Relation_Wheel_and_Flavor.md).
+
 ### 4. Cosmic Provenance
 
 Uses the axis:

@@ -21,3 +21,4 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0007 — Ethos Salience and Focus](DD-0007-ethos-salience-and-focus.md) — Accepted
 - [DD-0008 — Leaders, Generals, and Force Construction](DD-0008-leaders-generals-and-force-construction.md) — Accepted
 - [DD-0009 — Asynchronous Objective Combat](DD-0009-asynchronous-objective-combat.md) — Accepted
+- [DD-0010 — World Relation Wheel](DD-0010-world-relation-wheel.md) — Accepted

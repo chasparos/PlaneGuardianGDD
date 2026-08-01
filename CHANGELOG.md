@@ -18,6 +18,9 @@ All notable documentation changes are recorded here.
 - Defined Leaders, Generals, Expedition Commanders, force capacity, tactical deployment, and Battle Events.
 - Defined asynchronous objective-based attacks, attrition results, cooldown-locked defense slots, and Action cadence for active and occasional players.
 - Added design decisions DD-0007 through DD-0009.
+- Defined the World Relation wheel, its Restoration, Genesis, Excision, and Dissolution regions, and its flavor boundaries.
+- Added design decision DD-0010.
+- Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01
 
