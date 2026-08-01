@@ -1,0 +1,647 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 0ae6ce91859da541438651370ef538b5cadd3c07..0f50f12bfdff9f45260e99121799b06050f8cfa6 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -12,8 +12,12 @@ All notable documentation changes are recorded here.
+ - Defined protected source-based card discovery, limited-copy claims, Universes, Eras, the Hall of Fame, and Eternal-card promotion paths.
+ - Added community-reviewed creative stewardship for unique-card names and artwork.
+ - Added design decisions DD-0002 through DD-0005.
+-- Defined the eight-element affinity wheel, its four oppositions, compound manifestations, and the distinction between affinity, delivery, form, and condition.
+-- Added design decision DD-0006.
++- Defined the eight-element affinity wheel, its four oppositions, compound manifestations, and the distinction between affinity, delivery, form, and condition.
++- Added design decision DD-0006.
++- Defined the Ethos starter vocabulary, single-Salience model, optional Focus, and Champions of Balance.
++- Defined Leaders, Generals, Expedition Commanders, force capacity, tactical deployment, and Battle Events.
++- Defined asynchronous objective-based attacks, attrition results, cooldown-locked defense slots, and Action cadence for active and occasional players.
++- Added design decisions DD-0007 through DD-0009.
+ 
+ ## 0.1 - 2026-08-01
+ 
+diff --git a/Decisions/DD-0007-ethos-salience-and-focus.md b/Decisions/DD-0007-ethos-salience-and-focus.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..73f65f3e8a1be87cf524ff05d6336b87c75075b6
+--- /dev/null
++++ b/Decisions/DD-0007-ethos-salience-and-focus.md
+@@ -0,0 +1,29 @@
++# DD-0007 — Ethos Salience and Focus
++
++- **Status:** Accepted
++- **Date:** 2026-08-01
++- **Affected documents:** [Ethos Wheel and Naming Vocabulary](../Procedural/Ethos_Wheel_and_Naming_Vocabulary.md), [Lore Map and Affinity Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md)
++
++## Context
++
++Per-axis Salience could distinguish which Ethos axis most motivates a card, including different Champions of Balance. Applying it to every two-axis wheel would multiply procedural and naming states while often producing differences that players cannot perceive.
++
++## Decision
++
++Each wheel retains one Salience value. Complex cards may receive an optional Focus that narrows interpretation without becoming another independent naming branch. Ethos Focus may be Order–Chaos, Life–Death, Holistic, Center, or Cycle.
++
++High-Salience, low-Extremity cards may use relationships and Focus to represent active balance, synthesis, conflict, alternation, suppression, or paradox. Focus and exceptional relationships consume complexity budget.
++
++## Rationale
++
++- Keep the common procedural model compact and understandable.
++- Preserve special axis-specific identities where players can perceive them.
++- Support distinct Champions of Balance without generating per-axis Salience for every card.
++- Bound naming, ability, and art branches through Complexity.
++
++## Consequences
++
++- Coordinate position carries ordinary relative axis influence.
++- Focus is absent from most simple cards.
++- Naming treats Ethos as one influence and uses Focus only to constrain eligible vocabulary.
++- Mechanical rules for counterweight and balance effects remain to be specified.
+diff --git a/Decisions/DD-0008-leaders-generals-and-force-construction.md b/Decisions/DD-0008-leaders-generals-and-force-construction.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..695df1ab59e87f747d642ef7f23252053faaed85
+--- /dev/null
++++ b/Decisions/DD-0008-leaders-generals-and-force-construction.md
+@@ -0,0 +1,29 @@
++# DD-0008 — Leaders, Generals, and Force Construction
++
++- **Status:** Accepted
++- **Date:** 2026-08-01
++- **Affected documents:** [Combat and Raiding](../GDD/Combat_and_Raiding.md), [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
++
++## Context
++
++Attack and defense require a commander, troops, formation, tactical deployment, and support. Treating Leader, General, Formation, and Army as independent card families would blur the distinction between permanent cards and configured combat roles.
++
++## Decision
++
++Leader is a capability that permits a qualifying card to command a force. A Leader assigned to defense is the General; a Leader assigned to attack is the Expedition Commander. Army and Formation are configured combat structures rather than initial card types.
++
++The commander influences command capacity, eligible or favored troops, bonuses, formations, tactical zones, reserves, and Battle Event support. A Plane's economy supports defensive capacity, while an Attack Action defines the attacking force allowance. Capacity controls deployment size but does not replace card quality, synergy, or tactical planning.
++
++## Rationale
++
++- Use one force-planning model for attack and defense.
++- Allow several entity families to produce Leaders without duplicating card types.
++- Let wealthy Planes sustain broader defenses while elite small defenses remain viable.
++- Keep Rarity separate from direct command power.
++
++## Consequences
++
++- General and Expedition Commander are assignments with mutable state.
++- Quality and Complexity require distinct command effects.
++- Troop deployment costs and command-capacity formulas remain open.
++- Army names describe configured forces rather than permanent card identities.
+diff --git a/Decisions/DD-0009-asynchronous-objective-combat.md b/Decisions/DD-0009-asynchronous-objective-combat.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..ce714347321ec7037a4d18701f51766f6edfc4d8
+--- /dev/null
++++ b/Decisions/DD-0009-asynchronous-objective-combat.md
+@@ -0,0 +1,31 @@
++# DD-0009 — Asynchronous Objective Combat
++
++- **Status:** Accepted
++- **Date:** 2026-08-01
++- **Affected documents:** [Combat and Raiding](../GDD/Combat_and_Raiding.md), [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
++
++## Context
++
++Combat must support meaningful attack, defense, attrition, and different player schedules without requiring the defender to be online or allowing continuous presence to erase losses.
++
++## Decision
++
++Every Plane Seed contains a Rift defended by a configured standing army. An Attack Action acts as an engagement contract defining force allowance, objective threshold, payoff or consequence, cooldown, and special rules. Tactical victory, attrition, and objective completion are separate results.
++
++Combat snapshots the defense when an attack is declared and resolves asynchronously. Defeated cards enter cooldown. A deployed defender on cooldown remains committed to its slot and cannot be replaced until ready. The same commitment principle applies to other cards assigned to cooldown-governed roles.
++
++Short-cooldown Actions support frequent small attacks; long-cooldown Actions support less frequent, higher-impact play. Balance targets comparable opportunity over real time while allowing active play to retain informational and tactical flexibility.
++
++## Rationale
++
++- Make standing defense viable for offline players.
++- Let attacks pursue information, attrition, disruption, or plunder rather than one victory condition.
++- Make cooldown a persistent commitment and strategic wound.
++- Support both frequent and occasional play rhythms through Action Deck construction.
++
++## Consequences
++
++- Attack declaration must atomically snapshot defense and serialize attacks against a Plane.
++- Online defenders may prepare for later attacks but cannot alter a battle already declared or replace recovering cards.
++- Harassment can prepare a target for Pillage, creating coordinated attrition strategies.
++- Detailed battle turns, Breach calculation, cooldown balance, and anti-abuse counterplay remain open.
+diff --git a/Decisions/README.md b/Decisions/README.md
+index 435ec67b62ef3eafb55920a65aa298607c76b67b..d140bd6eeafb4999e01c37da5699e6cb5e30819c 100644
+--- a/Decisions/README.md
++++ b/Decisions/README.md
+@@ -16,5 +16,8 @@ Each record should contain status, date, context, decision, rationale, consequen
+ - [DD-0002 — Semantic Lore Map](DD-0002-semantic-lore-map.md) — Accepted
+ - [DD-0003 — Protected Source-Based Discovery](DD-0003-protected-source-discovery.md) — Accepted
+ - [DD-0004 — Universes, Eras, and Eternal Cards](DD-0004-universes-eras-and-eternal-cards.md) — Accepted
+-- [DD-0005 — Creative Stewardship of Unique Cards](DD-0005-creative-stewardship-of-unique-cards.md) — Accepted
+-- [DD-0006 — Elemental Affinity Wheel](DD-0006-elemental-affinity-wheel.md) — Accepted
++- [DD-0005 — Creative Stewardship of Unique Cards](DD-0005-creative-stewardship-of-unique-cards.md) — Accepted
++- [DD-0006 — Elemental Affinity Wheel](DD-0006-elemental-affinity-wheel.md) — Accepted
++- [DD-0007 — Ethos Salience and Focus](DD-0007-ethos-salience-and-focus.md) — Accepted
++- [DD-0008 — Leaders, Generals, and Force Construction](DD-0008-leaders-generals-and-force-construction.md) — Accepted
++- [DD-0009 — Asynchronous Objective Combat](DD-0009-asynchronous-objective-combat.md) — Accepted
+diff --git a/GDD/Combat_and_Raiding.md b/GDD/Combat_and_Raiding.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c444d612fc09246622b19188dba1e278dc78f62
+--- /dev/null
++++ b/GDD/Combat_and_Raiding.md
+@@ -0,0 +1,155 @@
++# Combat and Raiding
++
++- **Status:** Foundational design; detailed resolution rules remain open
++- **Related decisions:** [DD-0008](../Decisions/DD-0008-leaders-generals-and-force-construction.md), [DD-0009](../Decisions/DD-0009-asynchronous-objective-combat.md)
++- **Related document:** [PlaneGuardian GDD](PlaneGuardian_GDD.md)
++
++## Purpose
++
++Combat allows players to attack, defend, harass, and plunder Planes through asynchronous forces assembled from their card collections. It should reward collection quality, synergy, planning, economic preparation, and timing without requiring either player to remain continuously online.
++
++## The Rift
++
++Every Plane Seed contains a Rift through which attackers, thieves, traders, and guests enter the Plane. Defense is organized around controlling this arrival point. The Plane Guardian configures a standing defensive force that can resolve attacks without live input.
++
++## Card types and runtime roles
++
++- **Creature:** one significant being or a small homogeneous creature presence.
++- **Hero:** a specific individual.
++- **Squad:** an organized group acting as one deployment.
++- **Leader:** a capability that allows a qualifying card to command a force.
++- **General:** the Leader assigned to a defensive army.
++- **Expedition Commander:** the Leader assigned to an attacking force.
++- **Army:** the complete configured force; it is not itself a card type.
++- **Formation:** a deployment structure selected or unlocked by the commanding Leader; it is not initially a card type.
++
++A large Creature may consume more command capacity than a Squad. Scale is therefore a deployment cost rather than a reason to make Army a card family.
++
++## Force construction
++
++Attack and defense use a shared planning structure:
++
++```text
++Army
++  Commander
++  Formation
++  Tactical zones
++    Front line
++    Flanks
++    Reserves
++    Support
++  Troop deployments
++  Battle Events
++  Source effects
++```
++
++The commanding Leader's type, affinities, quality, and abilities determine command capacity, favored or permitted troops, bonuses and penalties, formations, tactical zones, reserve capacity, and Battle Event support.
++
++Quality influences command effectiveness. Complexity governs sophisticated formations, exceptions, triggers, and interactions. Rarity remains scarcity rather than a direct measure of power.
++
++### Defensive capacity
++
++```text
++Defensive capacity =
++  General command
++  + Plane economy
++  + defensive Lands and Facilities
++  + persistent modifiers
++```
++
++A large, stable, wealthy Plane can sustain a larger standing defense. Capacity does not guarantee effectiveness: a small Plane with exceptional cards, synergy, and a strong General may defeat a larger force of poor cards.
++
++### Attacking capacity
++
++```text
++Attacking capacity =
++  Attack Action allowance
++  + Expedition Commander modifiers
++  + temporary modifiers
++```
++
++The Attack Action defines how large or specialized an expedition may be. The attacker's home economy may pay costs, but Plane size does not automatically determine attacking capacity.
++
++## Battle Events
++
++Battle Events may be deployed in timed zones or attached to troops with triggers such as entry, defeat, damage, movement, or a specified combat turn. They may represent spells, reinforcements, hazards, maneuvers, or other occurrences.
++
++- **Deployed Battle Events** are selected by the player and enter cooldown after activation.
++- **Generated Battle Events** are produced by another card, such as a Harpy Nest generating a Harpy attack on turn four. They inherit semantic identity and restrictions from their source and may exist only for that battle.
++
++Generated names should preserve provenance. A Land named *The Galecliff Brood* might generate *Galecliff Harassment* rather than an unrelated event name.
++
++## Attack Actions as engagement contracts
++
++An attack requires an Action card and an Expedition Commander. The Action defines:
++
++```text
++Attack Action:
++  objective
++  attacking capacity
++  permitted or favored troops
++  objective threshold
++  reward or consequence
++  Action cooldown
++  special rules
++```
++
++The Action's objective is separate from merely winning the battlefield exchange. **Breach** or **Objective Progress** measures whether the expedition accomplished its mission.
++
++| Action archetype | Typical scale | Objective | Typical payoff |
++| --- | --- | --- | --- |
++| Probe | Very small | Reveal or test defenses | Information |
++| Raid | Small | Reach a low threshold | Limited resources |
++| Harassment | Small–medium | Defeat or disrupt defenders | Extended cooldowns |
++| Sabotage | Specialized | Reach support or a Facility | Temporary impairment |
++| Pillage | Large | Reach a high threshold | Significant plunder |
++| Assault | Large | Defeat the defensive formation | Strategic advantage |
++| Siege | Very large or persistent | Accumulate progress | Major Plane-level effect |
++
++A Harassment attack may award no plunder while imposing double cooldown on defeated defenders, preparing the target for a later Pillage.
++
++## Combat results
++
++An attack produces three related results:
++
++1. **Tactical result:** which force won the battlefield exchange.
++2. **Attrition result:** which cards entered cooldown and for how long.
++3. **Objective result:** whether the Action's threshold triggered its payload.
++
++An attacker may lose tactically while inflicting useful attrition. An attacker may also win tactically but fail to achieve enough Objective Progress to earn plunder.
++
++## Cooldown commitment
++
++Defeated cards enter real-world cooldown. A card committed to a role cannot be exchanged while on cooldown. This applies to Action Deck slots, deployed defenders, Generals, Expedition Commanders, Battle Events, recovering attackers, and bound support cards as appropriate.
++
++A defeated defender remains assigned to its tactical slot while recovering. The slot provides no active defender and cannot be filled from the collection until that card becomes ready. Collection depth provides configuration options but cannot erase attrition by cycling fresh cards into wounded positions.
++
++## Asynchronous resolution and online reaction
++
++An attack snapshots the defensive configuration when declared. The defender cannot retroactively alter that battle. The standing plan, General, formation, tactical zones, reserves, timed events, and triggers resolve without the defender being online.
++
++An online defender may inspect completed reports, rearrange ready cards, adjust available events, change future priorities, or counterattack. They may not replace or move committed cards on cooldown. Being online improves information and preparation for later attacks but does not erase previous losses.
++
++Attacks against one Plane must be serialized deterministically so concurrent attackers do not all fight the same pre-attrition state. The exact queue and transaction model remains technical work.
++
++## Action cadence and time fairness
++
++The Action Deck should support different play rhythms:
++
++- active players may select many short-cooldown, low-capacity Actions for frequent small raids and tactical reactions;
++- occasional players may select long-cooldown, higher-capacity Actions with larger thresholds and payoff.
++
++Balance should target comparable expected opportunity over real time. Active play grants flexibility and information rather than an overwhelming economic multiplier. Limited readiness banking for completed long cooldowns may be considered so occasional players do not lose most theoretical value by logging in late.
++
++## Open questions
++
++- Turn sequence, initiative, targeting, movement, and formation disruption.
++- Exact command-capacity and deployment-cost models.
++- General defeat and succession rules.
++- Reserve behavior after a defender enters cooldown.
++- Breach and Objective Progress calculation.
++- Plunder caps, resource protection, and failure costs.
++- Attack serialization, queues, and multi-player coordination.
++- Cooldown durations, extensions, and diminishing returns.
++- Counterplay against repeated Harassment followed by Pillage.
++- Whether long-cooldown Actions bank readiness and to what limit.
+diff --git a/GDD/PlaneGuardian_GDD.md b/GDD/PlaneGuardian_GDD.md
+index 34d5c875be62e370903174d5bbc595aaa3750ad7..b6f3ab635f8bf14feda29a03650297cb92518b8e 100644
+--- a/GDD/PlaneGuardian_GDD.md
++++ b/GDD/PlaneGuardian_GDD.md
+@@ -129,11 +129,18 @@ persistent Pocket Planes.
+ -   Plane Seed
+ -   Land
+ -   Structure
+--   Facility
+--   Action
+--   Relic
+--   Creature *(future)*
+--   Event *(future)*
++-   Facility
++-   Action
++-   Relic
++-   Creature
++-   Hero
++-   Squad
++-   Event
++
++Leader is a capability rather than a separate card family. A Leader
++assigned to defense becomes the General; a Leader assigned to an attack
++becomes the Expedition Commander. Army and Formation are configured
++combat structures rather than card types.
+ 
+ ## Card Axes
+ 
+@@ -176,11 +183,19 @@ Not every wheel influences every card. Card family and context determine
+ relevance, while Complexity determines how many influences or tensions
+ become visible. Mechanics, procedural names, art, and lore consume the
+ same profile so they describe a coherent artifact. Deliberate opposing
+-affinities require a relationship such as Equilibrium, Synthesis,
+-Conflict, Alternation, Suppression, or Paradox.
+-
+-See [Lore Map and Affinity
+-Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
++affinities require a relationship such as Equilibrium, Synthesis,
++Conflict, Alternation, Suppression, or Paradox.
++
++Each wheel uses one Salience value. Complex cards may receive an optional
++Focus that narrows interpretation without becoming another independent
++naming branch. Ethos Focus may emphasize Order--Chaos, Life--Death, the
++complete wheel, the center, or cycles among its regions.
++
++See [Lore Map and Affinity
++Wheels](../Procedural/Lore_Map_and_Affinity_Wheels.md).
++
++See [Ethos Wheel and Naming
++Vocabulary](../Procedural/Ethos_Wheel_and_Naming_Vocabulary.md).
+ 
+ Elemental Affinity uses four oppositions: Radiance--Shadow,
+ Fire--Ice, Air--Water, and Earth--Aether. Compounds such as Lightning
+@@ -229,7 +244,12 @@ Land cards are placed in concentric hexagonal rings.
+ 
+ The order of placement determines position.
+ 
+-Future systems will introduce adjacency bonuses and regional effects.
++Future systems will introduce adjacency bonuses and regional effects.
++
++Every Plane Seed contains a Rift through which attackers, thieves,
++traders, and guests enter. The Guardian configures a standing defensive
++army around the Rift so combat can resolve without the player being
++online.
+ 
+ ------------------------------------------------------------------------
+ 
+@@ -268,8 +288,38 @@ Examples:
+ -   Resource rituals
+ -   Time acceleration
+ -   Exploration
+--   Combat
+--   Diplomacy
++-   Combat
++-   Diplomacy
++
++## Combat Actions
++
++An attack requires an Action card and an Expedition Commander. The
++Action determines the objective, attacking capacity, success threshold,
++payoff or consequence, cooldown, and special rules. Possible objectives
++include probing, raiding, harassment, sabotage, pillage, assault, and
++siege.
++
++Attack and defense use the same planning concepts: commander, formation,
++tactical zones, troops, reserves, support, and Battle Events. A large
++economy can sustain greater defensive capacity, but card quality,
++synergy, command, and deployment determine effectiveness.
++
++Tactical victory, attrition, and objective completion are separate
++results. A Harassment attack may award no plunder while extending the
++cooldowns of defeated defenders to prepare for a later Pillage.
++
++Combat snapshots the configured defense when declared. Defeated cards
++enter real-world cooldown. A deployed defender on cooldown remains
++assigned to its slot and cannot be replaced until ready. Online players
++may react to completed battles and prepare for later attacks, but cannot
++alter an attack already underway or erase attrition by cycling cards.
++
++The Action Deck supports different play rhythms: active players may use
++frequent short-cooldown attacks with small payoffs, while occasional
++players may select longer-cooldown Actions with greater capacity and
++payoff. Balance should target comparable opportunity over real time.
++
++See [Combat and Raiding](Combat_and_Raiding.md).
+ 
+ ------------------------------------------------------------------------
+ 
+@@ -384,16 +434,32 @@ provide memory without receiving promotion power.
+ Unique-card discoverers may nominate reviewed presentation while
+ deterministic mechanics and fallback presentation remain intact.
+ 
+-## [DD-0006 --- Elemental Affinity Wheel](../Decisions/DD-0006-elemental-affinity-wheel.md)
+-
+-Eight foundational elements form four oppositions. Compound phenomena
+-and harmful conditions derive from affinities and other semantic wheels.
++## [DD-0006 --- Elemental Affinity Wheel](../Decisions/DD-0006-elemental-affinity-wheel.md)
++
++Eight foundational elements form four oppositions. Compound phenomena
++and harmful conditions derive from affinities and other semantic wheels.
++
++## [DD-0007 --- Ethos Salience and Focus](../Decisions/DD-0007-ethos-salience-and-focus.md)
++
++Each wheel retains one Salience value; exceptional cards may use an
++optional Focus to create perceptible axis-specific identity.
++
++## [DD-0008 --- Leaders, Generals, and Force Construction](../Decisions/DD-0008-leaders-generals-and-force-construction.md)
++
++Leader is a card capability, General and Expedition Commander are
++assignments, and armies are configured forces constrained by capacity.
++
++## [DD-0009 --- Asynchronous Objective Combat](../Decisions/DD-0009-asynchronous-objective-combat.md)
++
++Attacks resolve against standing defenses with separate tactical,
++attrition, and objective results; committed cards cannot be replaced
++while on cooldown.
+ 
+ ------------------------------------------------------------------------
+ 
+ # 15. Open Questions
+ 
+--   Combat
++-   Detailed combat turns, formations, targeting, and Breach calculation
+ -   Trading
+ -   Crafting
+ -   Creature system
+diff --git a/GDD/README.md b/GDD/README.md
+index 7eabc80c9810a83d382db86754c708ac0b4629f5..6dcc8edabf1849d8647cfff8b13061d27b51dba8 100644
+--- a/GDD/README.md
++++ b/GDD/README.md
+@@ -1,3 +1,7 @@
+ # Game design document
+ 
+-The integrated design lives in [PlaneGuardian_GDD.md](PlaneGuardian_GDD.md). Keep it readable as a coherent introduction to the whole game. Move deep implementation detail into the relevant supporting directory and link to it from the GDD.
++The integrated design lives in [PlaneGuardian_GDD.md](PlaneGuardian_GDD.md). Keep it readable as a coherent introduction to the whole game. Move deep implementation detail into the relevant supporting directory and link to it from the GDD.
++
++## Supporting specifications
++
++- [Combat and Raiding](Combat_and_Raiding.md)
+diff --git a/Procedural/Ethos_Wheel_and_Naming_Vocabulary.md b/Procedural/Ethos_Wheel_and_Naming_Vocabulary.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..f45b92748300578f15d4acc11cb66c089d7f1864
+--- /dev/null
++++ b/Procedural/Ethos_Wheel_and_Naming_Vocabulary.md
+@@ -0,0 +1,119 @@
++# Ethos Wheel and Naming Vocabulary
++
++- **Status:** Foundational design with starter vocabulary
++- **Related decision:** [DD-0007](../Decisions/DD-0007-ethos-salience-and-focus.md)
++- **Related documents:** [Lore Map and Affinity Wheels](Lore_Map_and_Affinity_Wheels.md), [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
++
++## Purpose
++
++Elemental Affinity describes what kind of power a card embodies. Ethos describes the state of existence it values. It influences behavior, abilities, military doctrine, naming, art, and lore without becoming a simple good–evil alignment.
++
++## Axes
++
++```text
++Order <-> Chaos
++Life  <-> Death
++```
++
++- **Order:** structure, law, repetition, hierarchy, predictability, and restraint.
++- **Chaos:** freedom, spontaneity, mutation, adaptation, possibility, and disruption.
++- **Life:** growth, propagation, vitality, appetite, birth, and biological emergence.
++- **Death:** endings, mortality, decomposition, stillness, ancestry, and return.
++
++Order may become tyranny, Chaos may enable liberation, Life may become uncontrolled consumption, and Death may provide mercy or renewal. Constructive and destructive expression comes from context and other wheels, especially World Relation.
++
++## Primary regions
++
++| Region | Working name | Constructive expressions | Destructive expressions |
++| --- | --- | --- | --- |
++| Order + Life | Cultivation | Healing, stewardship, sanctuary, civilization | Forced conformity, controlled breeding, perfection through removal |
++| Chaos + Life | Wild Growth | Adaptation, fertility, wilderness, diversity | Infestation, ravenous proliferation, uncontrolled mutation |
++| Order + Death | Rite | Ancestry, funerary law, peaceful endings, remembrance | Eternal servitude, sterile stagnation, refusal to release the dead |
++| Chaos + Death | Dissolution | Decomposition, scavenging, clearing space for renewal | Plague, entropy, indiscriminate ruin, collapse |
++
++Axis-centered regions describe Structure, Flux, Vitality, and Mortality without a strong commitment on the other axis. A card can therefore express pure law, change, life, or ending without being forced into a quadrant.
++
++## Salience, relationships, and Focus
++
++Ethos retains one Salience value for the entire wheel. The coordinate already expresses the relative contribution of both axes for ordinary cards. Generating Salience per axis would add states that are difficult for players to perceive and would multiply naming and ability branches.
++
++Complex cards may receive an optional **Focus**:
++
++- **Order–Chaos:** emphasizes structure, freedom, and their balance;
++- **Life–Death:** emphasizes vitality, mortality, and their cycle;
++- **Holistic:** treats the complete wheel as one doctrine;
++- **Center:** emphasizes neutral ground or the stillpoint;
++- **Cycle:** emphasizes movement and succession among states.
++
++Focus consumes complexity budget and should affect a name only when it creates a perceptible identity. Relationship modes such as Equilibrium, Synthesis, Conflict, Alternation, Suppression, and Paradox remain separate from Focus.
++
++## Champions of Balance
++
++A Champion of Balance has low Ethos Extremity, high Ethos Salience, an appropriate relationship such as Equilibrium or Correction, and optionally a Focus. It is not indecisive or automatically benevolent. It actively counteracts dominance:
++
++- introduces Chaos into tyranny;
++- imposes Order upon collapse;
++- restores Life to sterile stillness;
++- brings Death to endless, consuming growth.
++
++Order–Chaos, Life–Death, and Holistic Focus produce different Champions. Their effects may scale with a target's distance from equilibrium or express the semantic counterweight to the target's dominant Ethos.
++
++## Starter vocabulary
++
++| Region | Concepts | Titles and nouns | Descriptors and verbs |
++| --- | --- | --- | --- |
++| Order + Life | cultivation, stewardship, sanctuary, lineage | Cultivator, Steward, Gardener, Shepherd, Conservator | cultivated, ordered, fruitful; heal, govern, prune, refine |
++| Chaos + Life | wilderness, adaptation, mutation, hunger | Wildling, Brood, Swarm, Shifter, Seedbearer | wild, fecund, rampant; bloom, spawn, mutate, overgrow |
++| Order + Death | mortality, ancestry, judgment, rest | Ancestor, Judge, Gravekeeper, Ferryman, Last Witness | solemn, final, entombed; inter, conclude, remember, release |
++| Chaos + Death | decay, entropy, ruin, carrion | Scavenger, Ravager, Rotbringer, Devourer, Ashwalker | festering, broken, blighted; rot, erode, scatter, dissolve |
++| Order | law, measure, pattern, hierarchy | Arbiter, Magistrate, Architect, Lawgiver | measured, immutable, exact; bind, align, decree |
++| Chaos | chance, freedom, anomaly, disruption | Catalyst, Trickster, Liberator, Chanceborn | shifting, unforeseen, mercurial; disrupt, free, transform |
++| Life | breath, pulse, birth, growth, appetite | Lifebringer, Progenitor, Healer, Heartkeeper | living, vital, fertile; quicken, renew, propagate |
++| Death | ending, silence, memory, passage | Reaper, Mourner, Ferryman, Endkeeper | silent, fading, mortal; end, mourn, still, pass |
++
++Centered vocabulary depends upon relationship:
++
++| Relationship | Vocabulary |
++| --- | --- |
++| Equilibrium | balance, measure, scales, counterweight, stillpoint, poise |
++| Synthesis | union, concord, reconciliation, confluence, communion |
++| Conflict | schism, division, fracture, discord, inner war |
++| Alternation | cycle, turning, season, pendulum, return, succession |
++| Suppression | seal, chain, prison, restraint, containment |
++| Paradox | contradiction, impossibility, inversion, neither, both |
++
++These are seed concepts rather than exhaustive word lists. Lexicon entries eventually require coordinate, intensity, connotation, grammar, card-family, naming-role, and exclusion metadata.
++
++## Naming by card type
++
++The same Ethos must use different grammar for different cards:
++
++| Card type | Ethos primarily describes |
++| --- | --- |
++| Plane Seed | Foundational condition or cosmic principle |
++| Land | Character, ecology, or history of a place |
++| Structure | Form, authority, or symbolic purpose |
++| Facility | Operational function |
++| Creature | Nature, behavior, or ecological role |
++| Hero | Reputation, choice, or personal identity |
++| Leader | Doctrine, authority, or command style |
++| Squad | Collective identity and discipline |
++| Relic | Legacy, maker, purpose, or historic deed |
++| Action | Player intention |
++| Battle Event | Something occurring during battle |
++
++For Order + Life, examples include *Genesis of the Measured Garden*, *The Ninefold Orchard*, *Pruned-Antler Guardian*, *Alwen, Keeper of the First Seed*, *Third Cohort of the Living Wall*, *Muster the Garden Host*, and *The Ranks Take Root*.
++
++For a centered Champion of Balance, examples include *Field of Equal Seasons*, *Ilyra, Warden of the Turning Gate*, *The Counterweight Cohort*, *Restore the Measure*, and *The Balance Turns*.
++
++## Universe-bound doctrine
++
++Factions, religions, and divinities are intended to derive from the Universe seed so a Universe retains a recognizable mythology across Eras. Their exact generation is future work. Divine–Infernal remains separate from Ethos: a Divine power may be tyrannical, an Infernal power may defend equilibrium, and a Champion of Balance need not belong to either provenance.
++
++## Open questions
++
++- Exact coordinate and intensity metadata for the vocabulary.
++- How much Focus affects mechanics versus naming and lore.
++- Mechanical thresholds for Champions of Balance and counterweight effects.
++- Universe-seeded generation of factions, religions, and divinities.
++- Cultural grammar, morphology, and localization.
+diff --git a/Procedural/Lore_Map_and_Affinity_Wheels.md b/Procedural/Lore_Map_and_Affinity_Wheels.md
+index 8f97901ed1258afee7c85ff599942a0dc9a80905..158f5a64ac458310dcfd389fe549b4e179bf8041 100644
+--- a/Procedural/Lore_Map_and_Affinity_Wheels.md
++++ b/Procedural/Lore_Map_and_Affinity_Wheels.md
+@@ -98,7 +98,7 @@ Elemental affinity must remain separate from how an effect reaches and changes a
+ 
+ For example, Lightning Spear may use Fire–Air affinity, Elemental delivery, Piercing and Chained forms, and the Shocked condition. Spectral Talons may use Aether–Shadow affinity, Spiritual delivery, Slashing form, and a Soul Bleed condition.
+ 
+-### 2. Ethos
++### 2. Ethos
+ 
+ Uses two axes:
+ 
+@@ -107,7 +107,11 @@ Order <-> Chaos
+ Life  <-> Death
+ ```
+ 
+-Life is not inherently good, and Death is not inherently evil. Example regions include ordered cultivation, wild adaptation, funerary inevitability, and entropic decay.
++Life is not inherently good, and Death is not inherently evil. Example regions include ordered cultivation, wild adaptation, funerary inevitability, and entropic decay.
++
++Ethos uses one wheel-level Salience value. Complex cards may receive an optional Focus such as Order–Chaos, Life–Death, Holistic, Center, or Cycle. Focus narrows interpretation without multiplying the normal naming branches. High-Salience centered cards may become active Champions of Balance rather than merely indifferent.
++
++See [Ethos Wheel and Naming Vocabulary](Ethos_Wheel_and_Naming_Vocabulary.md).
+ 
+ ### 3. World Relation
+ 
+@@ -252,13 +256,14 @@ A highly salient centered wheel may contribute balance or conflict vocabulary ev
+ Canonical coordinates should use fixed-size integers rather than platform-dependent floating-point values. A possible representation is:
+ 
+ ```text
+-WheelCoordinate:
+-  wheelId
+-  angle: 0..65535
+-  extremity: 0..65535
+-  salience: 0..65535
+-  relationshipMode: optional
+-  secondaryPoles: optional
++WheelCoordinate:
++  wheelId
++  angle: 0..65535
++  extremity: 0..65535
++  salience: 0..65535
++  relationshipMode: optional
++  focus: optional
++  secondaryPoles: optional
+ ```
+ 
+ The final encoding, sampling distributions, and deterministic trigonometric implementation remain technical decisions. Generator and Lore Map versions are compatibility-critical.
+diff --git a/Procedural/README.md b/Procedural/README.md
+index 1a140a7301577967e6444afe8e89f3c2f1d91184..929d2f30755f23584b647c5cf922d537ff49a71f 100644
+--- a/Procedural/README.md
++++ b/Procedural/README.md
+@@ -4,5 +4,6 @@ Use this directory for the versioned specifications that deterministically deriv
+ 
+ ## Documents
+ 
+-- [Lore Map and Affinity Wheels](Lore_Map_and_Affinity_Wheels.md)
+-- [Card Origins and Protected Discovery](Card_Origins_and_Protected_Discovery.md)
++- [Lore Map and Affinity Wheels](Lore_Map_and_Affinity_Wheels.md)
++- [Ethos Wheel and Naming Vocabulary](Ethos_Wheel_and_Naming_Vocabulary.md)
++- [Card Origins and Protected Discovery](Card_Origins_and_Protected_Discovery.md)
