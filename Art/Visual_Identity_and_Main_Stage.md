@@ -1,6 +1,6 @@
 # Visual Identity and Main Stage
 
-- **Status:** Foundational art direction; concept validation remains open
+- **Status:** Foundational art direction; first Main Stage direction approved
 - **Related decision:** [DD-0018](../Decisions/DD-0018-painted-astral-tabletop.md)
 - **Related documents:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md), [Card Zones and Attachments](../GDD/Card_Zones_and_Attachments.md), [First Plane Onboarding](../GDD/First_Plane_Onboarding.md)
 
@@ -15,6 +15,19 @@ terrain, landmarks, bridges, creatures, atmosphere, and rules.
 The direction favors strong silhouettes, exaggerated proportions, broad
 painterly value shapes, controlled palettes, modular assets, and deterministic
 composition over semi-realism and fine geometric detail.
+
+## Approved Main Stage direction
+
+![Approved Main Stage direction](Concepts/Main_Stage/Main_Stage_Direction_01.png)
+
+The [concept record](Concepts/Main_Stage/README.md) establishes the first
+approved visual target for the Main Stage. It is a composition, hierarchy, and
+visual-language reference rather than a literal production screenshot.
+
+The concept confirms that ordinary Lands are topography-first wilderness
+dioramas. Buildings and other signs of development normally come from attached
+cards or an explicitly civilized biome. The Void remains quiet negative space,
+and island boundaries remain crisp beneath any optional atmospheric blending.
 
 ## Art-production principles
 
@@ -87,9 +100,19 @@ biome materials, undersides, bridges, props, landmarks, and effects. Variation
 comes from shape parameters, composition, orientation, density, palette, and
 semantic treatment.
 
-Props should form deliberate clusters and sight lines. A forest uses a few
-strong tree masses; a mountain uses exaggerated peaks; a settlement uses a
-small number of oversized recognizable buildings.
+Each island top is treated as a generated heightmap with a small number of
+large elevation gestures. Most Lands are wild and use two or three
+biome-identifying silhouette landmarks. At least one may sit near the rear edge
+and break the local horizon so flatter Lands remain recognizable at gameplay
+scale. A forest might use one ancient tree and a wooded ridge; a mountain uses
+exaggerated peaks; a water Land uses a carved bluff, arch, or waterfall shelf.
+
+Props form deliberate clusters and sight lines but remain subordinate to
+topography. A settlement uses a small number of oversized recognizable
+buildings, while an ordinary wild Land should not imply unearned development.
+Cliff edges and undersides use clean, readable silhouettes against the Void.
+Mist, smoke, dust, and glow are optional state or atmosphere layers and must
+not be required to hide weak island geometry.
 
 ## Bridges and adjacency
 
@@ -163,6 +186,11 @@ the host biome:
 
 Nested attachments become secondary details around the primary landmark or
 appear in expandable inspection rather than requiring another full-size object.
+
+Empty attachment slots appear in the island itself as small flat clearings,
+foundations, pedestals, or mounting plinths. Their material and shape may follow
+the biome, but a shared rim glyph or structural motif keeps the game function
+recognizable. A slot reads as unoccupied capacity, not as a prebuilt structure.
 
 ## Plane-state channels
 

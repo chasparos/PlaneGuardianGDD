@@ -43,6 +43,12 @@ All notable documentation changes are recorded here.
 - Defined domain-separated starter generation and the first Leader summoning sequence.
 - Added design decisions DD-0018 and DD-0019 plus Art, onboarding, and Technical specifications.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
+- Approved and added the first Main Stage visual-direction concept.
+- Defined topography-first wild Lands, rear-horizon biome landmarks, crisp
+  island silhouettes, visible attachment foundations, and separately layered
+  Plane-state and atmospheric presentation.
+- Added initial production guides for Floating Lands, Attachment Slots, and
+  Plane-State Visual Language.
 
 ## 0.1 - 2026-08-01
 
