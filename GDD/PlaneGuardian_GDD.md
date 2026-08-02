@@ -288,9 +288,16 @@ A Plane begins with a Plane Seed.
 
 Land cards are placed in concentric hexagonal rings.
 
-The order of placement determines position.
+The order of placement determines position and activation priority. Lands
+activate as a prefix of that ordered list for as long as the Plane can pay
+their adjusted Astral Essence upkeep.
 
-Future systems will introduce adjacency bonuses and regional effects.
+Static adjacency rules calculate local Stability while the player builds.
+They distinguish Peers in the same ring, inward Lands being supported, and
+outward Lands providing support. Stability modifies Essence upkeep before
+activation is resolved. Card abilities may ignore, halve, double, reverse,
+or otherwise use adjacency effects. The builder shows base upkeep,
+adjacency modifiers, final upkeep, and the resulting active extent.
 
 Every Plane Seed contains a Rift through which attackers, thieves,
 traders, and guests enter. The Guardian configures a standing defensive
@@ -301,12 +308,18 @@ online.
 
 # 8. Resource Economy
 
-Resources belong to several families:
+Resources provisionally belong to several tiers:
 
--   Mundane
--   Refined
--   Magical
--   Divine
+-   Tier I natural or foundational materials
+-   Tier II refined or prepared goods
+-   Tier III magical reagents and materials
+-   Tier IV planar materials
+-   Tier V mythic resources
+
+Routine needs are assumed rather than charged as universal resource taxes.
+Explicit resources should represent strategic demands, distinctive
+appetites, useful conversion choices, trade, timing, or card-enabling
+requirements. Most routine production chains should remain short.
 
 Astral Essence sustains reality itself.
 
@@ -314,7 +327,29 @@ Every Plane Seed generates Astral Essence.
 
 Most Lands consume it as upkeep.
 
-Dormant Lands cease functioning until upkeep can again be paid.
+Dormant Lands cease producing and using active abilities until upkeep can
+again be paid. Structural storage normally remains available.
+
+Each resource has its own capacity. A normal Land provisionally contributes
+2 capacity for every Tier I and Tier II resource, 1 for every Tier III
+resource, and none for Tier IV or Tier V. Better Lands may intrinsically
+store 1 of each higher-tier resource. Safe Storage is a protected subset of
+capacity that cannot be plundered and requires no manual allocation.
+
+Excess resources remain as exposed overflow rather than being silently
+destroyed. Overflow cannot increase, is vulnerable to plunder, and may
+attract occasional AI-controlled smash-and-grab attacks through the Rift.
+These attacks obey lazy simulation and resolve against the standing defense.
+
+The Plane also has an ordered Economic Operations Pile. Only its top card
+may activate. If that card is unaffordable, fails a printed requirement, or
+remains on cooldown, the pile stops until the player fixes the engine or the
+blocker becomes ready. A successful Operation pays its costs, resolves,
+enters cooldown, and moves to the bottom. Cards within a pile never execute
+in parallel; exceptionally rare effects may grant a second independent pile.
+
+See [Plane Economy and
+Operations](../Economy/Plane_Economy_and_Operations.md).
 
 ------------------------------------------------------------------------
 
@@ -524,6 +559,13 @@ Divine--Infernal provenance opens into a Universe-seeded relational
 pantheon and hierarchical Hell, with Worldly or Unaligned identity at the
 center. Cosmological powers inhabit and influence the Lore Map rather than
 defining it.
+
+## [DD-0014 --- Plane Economy Foundations](../Decisions/DD-0014-plane-economy-foundations.md)
+
+Plane economy is governed by static adjacency Stability, ordered prefix
+activation, a deliberately blocking sequential Operations Pile,
+per-resource storage with protected capacity, and exposed overflow that may
+attract opportunistic AI raids.
 
 ------------------------------------------------------------------------
 

@@ -28,6 +28,10 @@ All notable documentation changes are recorded here.
 - Defined Cosmic Provenance as a Divine--Infernal axis with a Worldly or Unaligned center.
 - Established a Universe-seeded relational pantheon, hierarchical Hell, and relationship-weighted influence on associated cards.
 - Added design decision DD-0013, completing the initial definitions of all six semantic wheels.
+- Defined static adjacency Stability, Essence-adjusted prefix activation, and directional support scopes for Plane construction.
+- Defined the sequential blocking Economic Operations Pile and rare additional-pile effects.
+- Defined per-resource ordinary and Safe Storage, exposed overflow, and opportunistic AI smash-and-grab raids.
+- Added design decision DD-0014 and the foundational Plane economy document.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01
