@@ -21,5 +21,6 @@ This repository contains the living game design document and supporting design r
 | `Economy/` | Resources, balance models, progression, and trading design. |
 | `Procedural/` | Deterministic generation rules for cards, names, abilities, and visuals. |
 | `Art/` | Art direction, UI concepts, card layouts, and visual references. |
+| `Technical/` | Client, server, persistence, protocol, and deployment specifications. |
 
 `repository_snapshot.zip` is a generated handoff artifact and is intentionally excluded from version control.

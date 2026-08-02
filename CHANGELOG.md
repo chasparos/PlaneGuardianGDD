@@ -37,6 +37,11 @@ All notable documentation changes are recorded here.
 - Separated Plane Time from player-space Real Time and made explicit time advancement resolve complete local simulation.
 - Defined combat as timeless resolution and cross-Plane persistence as target-local spawned Effects rather than card travel.
 - Added design decisions DD-0015 through DD-0017 and supporting specifications.
+- Defined the painted astral-tabletop visual identity, floating hex islands, adaptive Main Stage, and distinct card-frame channels.
+- Defined modular Seed maturity with permanent silhouettes and transient power, Stability, prosperity, size, and affinity presentation.
+- Established the jME3 client, pure Java NIO TCP server, development H2 persistence, application flow, and first-Plane onboarding.
+- Defined domain-separated starter generation and the first Leader summoning sequence.
+- Added design decisions DD-0018 and DD-0019 plus Art, onboarding, and Technical specifications.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01

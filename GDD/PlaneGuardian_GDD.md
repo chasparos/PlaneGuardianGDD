@@ -109,6 +109,24 @@ Each fragment manifests as a magical card.
 By arranging these fragments around a Plane Seed, Guardians cultivate
 persistent Pocket Planes.
 
+## Visual Identity
+
+The Main Stage presents the current Plane as a painted high-fantasy tabletop
+diorama. Procedurally composed floating hex islands hang over a dark,
+deep-field-inspired Void and connect through narrow bridges that communicate
+adjacency and Stability. The current Plane's affinity and emergent identity
+shift the Void, UI accents, island materials, particles, and ambient motion
+without compromising readability.
+
+Plane size, power, Stability, prosperity, and maturity use distinct visual
+channels. A Seed matures through modular structural stages that change its
+silhouette while transient state changes lighting, motion, energy, and visible
+activity. Card frames separately communicate family, rarity, Quality,
+affinity, cooldown, and unique status.
+
+See [Visual Identity and Main
+Stage](../Art/Visual_Identity_and_Main_Stage.md).
+
 ------------------------------------------------------------------------
 
 # 5. Core Systems
@@ -504,10 +522,27 @@ fresh starts meaningful.
 
 The game favors deterministic systems.
 
+The target client is Java using jMonkeyEngine 3. The authoritative server is a
+pure Java NIO TCP service. Development persistence uses H2 behind explicit
+repository interfaces and migrations; the final production database remains
+open, with PostgreSQL the preferred current direction.
+
 Generated card data should be reproducible from GUIDs.
 
 Persistent storage should contain only mutable state such as ownership,
 cooldowns, inventories, and timestamps.
+
+The client flow is Splash, Loading, Login or Account Creation, Game Menu, and
+Main Stage. First-Plane onboarding occurs inside the Main Stage through Seed
+summoning, a semantic questionnaire, a coherent common starter collection,
+and a special Action that generates a slightly higher-Quality Hero with
+Leader.
+
+Starter families are selected through authoritative domain-separated
+generation contexts rather than by modifying completed hash bytes.
+
+See [First Plane Onboarding](First_Plane_Onboarding.md) and [Client and Server
+Architecture](../Technical/Client_Server_Architecture.md).
 
 ------------------------------------------------------------------------
 
@@ -633,6 +668,18 @@ with Power budget.
 Deployed state uses Plane Time, player-space Actions use Real Time, combat
 consumes no elapsed time, and cross-Plane interactions transfer consequences
 as target-local runtime Effects rather than moving cards.
+
+## [DD-0018 --- Painted Astral Tabletop](../Decisions/DD-0018-painted-astral-tabletop.md)
+
+The game uses modular, painterly high-fantasy dioramas over an adaptive cosmic
+Void. Permanent Seed maturity changes silhouette, while current Plane state
+changes lighting, activity, cohesion, and effects.
+
+## [DD-0019 --- Java Platform and First Plane Flow](../Decisions/DD-0019-java-platform-and-first-plane-flow.md)
+
+The jME3 client and pure Java NIO server support a Main-Stage onboarding flow
+whose domain-separated starter generation guarantees a Seed, coherent common
+cards, and a first Leader without post-processing hashes.
 
 ------------------------------------------------------------------------
 

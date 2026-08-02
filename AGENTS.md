@@ -22,7 +22,7 @@ These instructions apply to the entire repository unless a more specific `AGENTS
 
 - `GDD/PlaneGuardian_GDD.md` is the main, integrated game design document.
 - `Decisions/` records settled choices and their rationale.
-- `Lore/`, `Economy/`, `Procedural/`, and `Art/` hold supporting material that would make the main GDD unwieldy.
+- `Lore/`, `Economy/`, `Procedural/`, `Art/`, and `Technical/` hold supporting material that would make the main GDD unwieldy.
 
 ## Snapshot and Canvas workflow
 

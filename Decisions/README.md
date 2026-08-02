@@ -29,3 +29,5 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0015 — Card Zones, Attachments, and Commitment](DD-0015-card-zones-attachments-and-commitment.md) — Accepted
 - [DD-0016 — Mechanical Generation Budget](DD-0016-mechanical-generation-budget.md) — Accepted
 - [DD-0017 — Clock Ownership and Timeless Combat](DD-0017-clock-ownership-and-timeless-combat.md) — Accepted
+- [DD-0018 — Painted Astral Tabletop](DD-0018-painted-astral-tabletop.md) — Accepted
+- [DD-0019 — Java Platform and First Plane Flow](DD-0019-java-platform-and-first-plane-flow.md) — Accepted
