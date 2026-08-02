@@ -11,3 +11,4 @@ Use this directory for the versioned specifications that deterministically deriv
 - [Magical Tradition Wheel and Flavor](Magical_Tradition_Wheel_and_Flavor.md)
 - [Manifestation Wheel and Flavor](Manifestation_Wheel_and_Flavor.md)
 - [Card Origins and Protected Discovery](Card_Origins_and_Protected_Discovery.md)
+- [Mechanical Generation Budget](Mechanical_Generation_Budget.md)

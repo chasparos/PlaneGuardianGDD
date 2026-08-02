@@ -32,6 +32,11 @@ All notable documentation changes are recorded here.
 - Defined the sequential blocking Economic Operations Pile and rare additional-pile effects.
 - Defined per-resource ordinary and Safe Storage, exposed overflow, and opportunistic AI smash-and-grab raids.
 - Added design decision DD-0014 and the foundational Plane economy document.
+- Defined card zones, broad attachment compatibility, single-instance commitment, and provisional Land slot rates.
+- Defined the generic Land chassis and AVU-based mechanical generation budget with bounded downside credit.
+- Separated Plane Time from player-space Real Time and made explicit time advancement resolve complete local simulation.
+- Defined combat as timeless resolution and cross-Plane persistence as target-local spawned Effects rather than card travel.
+- Added design decisions DD-0015 through DD-0017 and supporting specifications.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 
 ## 0.1 - 2026-08-01

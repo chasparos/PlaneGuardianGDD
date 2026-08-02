@@ -82,6 +82,22 @@ Dormant Lands remain configured parts of the Plane. They stop producing and
 using active abilities but continue contributing static properties unless a
 rule explicitly says otherwise.
 
+## Generic Land chassis
+
+The generic Land establishes the zero point for procedural valuation:
+
+- contributes its semantic profile to the Plane's affinities;
+- has a biome or Land type that selects a compatible ordinary output;
+- produces 1 Tier I resource per Plane Day;
+- provides baseline lower-tier storage;
+- pays standard Land Astral Essence upkeep;
+- has no attachment slot or additional ability.
+
+These properties are the baseline entitlement for being a Land rather than
+positive abilities purchased from its generated Power budget. Generation
+budget buys improvements above the chassis. See [Mechanical Generation
+Budget](../Procedural/Mechanical_Generation_Budget.md).
+
 ## Adjacency Stability
 
 Stability is a visible, derived property of the configured layout rather than
@@ -195,6 +211,10 @@ for resources, or accept the stall.
 A cooling-down card that returns to the top also blocks the pile. Players must
 balance card count, production cadence, costs, cooldown length, and order so
 the engine completes a useful cycle.
+
+Deployed Operation cooldowns and readiness use the containing Plane's local
+time. Advancing that Plane's time advances the pile, its costs, triggers, and
+cooldowns together.
 
 The interface must clearly identify the top card and the exact blocking
 condition.

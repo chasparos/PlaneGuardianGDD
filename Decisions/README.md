@@ -26,3 +26,6 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0012 — Magical Tradition Wheel](DD-0012-magical-tradition-wheel.md) — Accepted
 - [DD-0013 — Cosmic Provenance and Cosmology](DD-0013-cosmic-provenance-and-cosmology.md) — Accepted
 - [DD-0014 — Plane Economy Foundations](DD-0014-plane-economy-foundations.md) — Accepted
+- [DD-0015 — Card Zones, Attachments, and Commitment](DD-0015-card-zones-attachments-and-commitment.md) — Accepted
+- [DD-0016 — Mechanical Generation Budget](DD-0016-mechanical-generation-budget.md) — Accepted
+- [DD-0017 — Clock Ownership and Timeless Combat](DD-0017-clock-ownership-and-timeless-combat.md) — Accepted

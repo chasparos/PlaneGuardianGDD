@@ -12,6 +12,10 @@ Combat allows players to attack, defend, harass, and plunder Planes through asyn
 
 Every Plane Seed contains a Rift through which attackers, thieves, traders, and guests enter the Plane. Defense is organized around controlling this arrival point. The Plane Guardian configures a standing defensive force that can resolve attacks without live input.
 
+Combat occurs outside elapsed Plane Time. The Rift or attack effect creates an
+ordered combat context, but participating cards do not physically travel to or
+remain inside another Plane.
+
 ## Card types and runtime roles
 
 - **Creature:** one significant being or a small homogeneous creature presence.
@@ -120,7 +124,7 @@ An attacker may lose tactically while inflicting useful attrition. An attacker m
 
 ## Cooldown commitment
 
-Defeated cards enter real-world cooldown. A card committed to a role cannot be exchanged while on cooldown. This applies to Action Deck slots, deployed defenders, Generals, Expedition Commanders, Battle Events, recovering attackers, and bound support cards as appropriate.
+Defeated deployed cards enter cooldown on their owning Plane's local clock. A card committed to a role cannot be exchanged while on cooldown. This applies to deployed defenders, Generals, Expedition Commanders, Battle Events, recovering attackers, and bound support cards as appropriate. The initiating Action remains in player space and uses Real Time.
 
 A defeated defender remains assigned to its tactical slot while recovering. The slot provides no active defender and cannot be filled from the collection until that card becomes ready. Collection depth provides configuration options but cannot erase attrition by cycling fresh cards into wounded positions.
 
@@ -131,6 +135,31 @@ An attack snapshots the defensive configuration when declared. The defender cann
 An online defender may inspect completed reports, rearrange ready cards, adjust available events, change future priorities, or counterattack. They may not replace or move committed cards on cooldown. Being online improves information and preparation for later attacks but does not erase previous losses.
 
 Attacks against one Plane must be serialized deterministically so concurrent attackers do not all fight the same pre-attrition state. The exact queue and transaction model remains technical work.
+
+## Timeless resolution and remote Effects
+
+Battle turns are ordinal resolution steps rather than units of Plane Time.
+During combat, neither Plane produces resources, advances Operations, heals,
+or progresses deployed cooldowns. Combat can still create persistent
+consequences.
+
+Attacking card instances retain their home Plane as clock owner. After combat,
+defeated attackers receive cooldowns in their home Plane; defenders receive
+cooldowns in the defended Plane. The initiating Action remains in player space
+and uses Real Time.
+
+Persistent cross-Plane consequences create runtime Effects attached to the
+target instead of transferring the source card. A one-week curse on a target
+Hero uses one week of the target Plane's time. By default, its numerical
+payload is snapshotted on creation while its source reference remains for
+provenance, naming, reports, and explicit source interactions.
+
+Timeless does not mean simultaneous. Multiple attacks use an authoritative
+sequence, and later attacks resolve against state changed by earlier ones even
+if they share a displayed Plane timestamp.
+
+See [Time, Combat, and Cross-Plane
+Effects](Time_Combat_and_Cross_Plane_Effects.md).
 
 ## Action cadence and time fairness
 
@@ -153,3 +182,5 @@ Balance should target comparable expected opportunity over real time. Active pla
 - Cooldown durations, extensions, and diminishing returns.
 - Counterplay against repeated Harassment followed by Pillage.
 - Whether long-cooldown Actions bank readiness and to what limit.
+- Exact tie-breaking and transaction rules for several timeless attacks at one
+  Plane timestamp.

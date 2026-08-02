@@ -124,23 +124,29 @@ persistent Pocket Planes.
 
 # 6. Card System
 
-## Planned Categories
+## Planned Families and Tags
 
--   Plane Seed
--   Land
--   Structure
--   Facility
--   Action
--   Relic
--   Creature
--   Hero
--   Squad
--   Event
+Top-level card families should describe deployment grammar. The current
+working families are Plane Seed, Land, Enhancement, Entity, Action,
+Operation, Event, and Relic. Creature, Hero, and Squad are Entity subtypes;
+Structure, Facility, Enchantment, Location, Fortification, and similar
+concepts are normally Enhancement subtypes or tags rather than separate
+deployment families. Final player-facing terminology remains open.
 
 Leader is a capability rather than a separate card family. A Leader
 assigned to defense becomes the General; a Leader assigned to an attack
 becomes the Expedition Commander. Army and Formation are configured
 combat structures rather than card types.
+
+Only Lands create ordinary Plane hexes. Other cards occupy explicit zones,
+attach through broadly typed host slots, or contribute through Plane-wide
+configurations. Hard compatibility constraints are rare; most relationships
+use upkeep, Stability, bonuses, and penalties so a large theoretical card
+space remains practically usable.
+
+Each owned copy is a distinct card instance and may occupy only one
+committed role. Owning multiple copies permits multiple deployments where
+budgets and other rules allow.
 
 ## Card Axes
 
@@ -299,6 +305,28 @@ activation is resolved. Card abilities may ignore, halve, double, reverse,
 or otherwise use adjacency effects. The builder shows base upkeep,
 adjacency modifiers, final upkeep, and the resulting active extent.
 
+A generic Land contributes its Lore Map profile to Plane affinity, provides
+baseline lower-tier storage, pays standard Essence upkeep, and produces 1
+biome-appropriate Tier I resource per Plane Day. Additional production,
+tags, triggers, capacities, abilities, and attachment slots consume generated
+Power and Complexity budgets. Downsides may release discounted Power budget.
+
+Only Lands create ordinary hex tiles. Approximately 20% of generated Lands
+provisionally receive one Enhancement slot and 0.1% receive two. Slots consume
+generation budget and normally increase upkeep even while empty; attached
+cards add their own upkeep. Slotless Lands retain budget for stronger
+intrinsic identity. Structures and Facilities are normally Enhancement
+subtypes or tags rather than top-level card families.
+
+Lands also influence Plane-wide deployment budgets and eligibility, including
+the recurring Operations pile, Rift defense, Battle Events, troop use, and
+other systems. Local attachment capacity, global deployment budget, and
+eligibility are separate rules.
+
+See [Card Zones and
+Attachments](Card_Zones_and_Attachments.md) and [Mechanical Generation
+Budget](../Procedural/Mechanical_Generation_Budget.md).
+
 Every Plane Seed contains a Rift through which attackers, thieves,
 traders, and guests enter. The Guardian configures a standing defensive
 army around the Rift so combat can resolve without the player being
@@ -390,7 +418,7 @@ results. A Harassment attack may award no plunder while extending the
 cooldowns of defeated defenders to prepare for a later Pillage.
 
 Combat snapshots the configured defense when declared. Defeated cards
-enter real-world cooldown. A deployed defender on cooldown remains
+enter cooldown on their home Plane's local clock. A deployed defender on cooldown remains
 assigned to its slot and cannot be replaced until ready. Online players
 may react to completed battles and prepare for later attacks, but cannot
 alter an attack already underway or erase attrition by cycling cards.
@@ -406,6 +434,11 @@ See [Combat and Raiding](Combat_and_Raiding.md).
 
 # 10. Time & Simulation
 
+Plane Time and Real Time are distinct clock domains. Deployed cards and
+runtime Effects experience their containing Plane's local time. The Guardian's
+player-space Action Deck and account-level systems use authoritative Real
+Time.
+
 Each Plane stores:
 
 -   Current State
@@ -420,6 +453,21 @@ When accessed:
 4.  Save the new timestamp.
 
 No Plane is continuously simulated.
+
+An Action that advances a Plane by one week performs a genuine week of local
+simulation: production, upkeep, healing, deployed cooldowns, Operations,
+Events, storage, overflow, and hazards all advance. The Action's own
+player-space cooldown remains on Real Time.
+
+Combat resolves outside elapsed time. Battle turns are ordered resolution
+steps rather than Plane-time durations. Attacking cards do not travel to or
+remain inside the target Plane; combat applies consequences to their home
+instances. Persistent cross-Plane interaction creates a runtime Effect on the
+target, which uses the target Plane's time and retains provenance from its
+source.
+
+See [Time, Combat, and Cross-Plane
+Effects](Time_Combat_and_Cross_Plane_Effects.md).
 
 ------------------------------------------------------------------------
 
@@ -566,6 +614,25 @@ Plane economy is governed by static adjacency Stability, ordered prefix
 activation, a deliberately blocking sequential Operations Pile,
 per-resource storage with protected capacity, and exposed overflow that may
 attract opportunistic AI raids.
+
+## [DD-0015 --- Card Zones, Attachments, and Commitment](../Decisions/DD-0015-card-zones-attachments-and-commitment.md)
+
+Only Lands create ordinary hexes. Other cards use explicit zones and broadly
+typed attachment slots; each owned instance may occupy only one committed
+role. Hard compatibility constraints remain rare.
+
+## [DD-0016 --- Mechanical Generation Budget](../Decisions/DD-0016-mechanical-generation-budget.md)
+
+The generic Land is the baseline chassis. One Ability Value Unit measures the
+expected value of one additional Tier I resource per Plane Day; input credit
+does not exceed consumed reference value, and conversion margin is purchased
+with Power budget.
+
+## [DD-0017 --- Clock Ownership and Timeless Combat](../Decisions/DD-0017-clock-ownership-and-timeless-combat.md)
+
+Deployed state uses Plane Time, player-space Actions use Real Time, combat
+consumes no elapsed time, and cross-Plane interactions transfer consequences
+as target-local runtime Effects rather than moving cards.
 
 ------------------------------------------------------------------------
 
