@@ -6,8 +6,10 @@ Use this directory for art direction, UI concepts, hex-tile and card layouts, pr
 
 - [Visual Identity and Main Stage](Visual_Identity_and_Main_Stage.md)
 - [Approved Main Stage concept](Concepts/Main_Stage/README.md)
+- [Land and Attachment visual-contract concepts](Concepts/Land_Attachment_Contract/README.md)
 - [Floating Lands production guide](Production_Guides/Floating_Lands.md)
 - [Attachment Slots production guide](Production_Guides/Attachment_Slots.md)
+- [Land and Attachment Visual Contract](Production_Guides/Land_and_Attachment_Visual_Contract.md)
 - [Plane-State Visual Language](Production_Guides/Plane_State_Language.md)
 
 ## Concept status

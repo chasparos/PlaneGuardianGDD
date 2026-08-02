@@ -2,6 +2,7 @@
 
 - **Status:** Initial guide derived from approved concept
 - **Reference:** [Main Stage Concept 01](../Concepts/Main_Stage/README.md)
+- **Related guide:** [Land and Attachment Visual Contract](Land_and_Attachment_Visual_Contract.md)
 
 ## Visual role
 
@@ -23,9 +24,20 @@ obscure the common interaction language.
 
 ## Occupied state
 
-An attached card places its primary landmark on the foundation and may add a
-small supporting composition nearby. The host biome remains visible. Removal
-or cooldown effects should not require regenerating the island heightmap.
+An attached card places its primary landmark on the foundation and retains its
+own silhouette, dominant palette, materials, and construction language. The
+host biome remains visible and influences only a bounded integration seam:
+contact tint, a ground decal, small overlays, reflected light, or one restrained
+interaction effect. Removal or cooldown effects should not require regenerating
+the island heightmap or attached model.
+
+An off-color attachment is not corrected into the host palette. A Verdant Oak
+on a Death Land remains alive and green; the host may add ash and pale lichen to
+its lowest roots without making the whole tree dead or spectral.
+
+Attachments should normally use one primary model, no more than a few modular
+details, a host-blend mask, contact and overlay anchors, and bounded VFX sockets.
+Nested attachments must not create an unbounded visible model tree.
 
 ## Validation questions
 
@@ -33,3 +45,5 @@ or cooldown effects should not require regenerating the island heightmap.
 2. Does it look unoccupied rather than unfinished or destroyed?
 3. Does the occupied landmark remain attributable to its attached card?
 4. Can the same slot transform across biome materials without losing meaning?
+5. Does an off-color attachment remain recognizable as the same card?
+6. Can host integration be disabled without damaging the attachment model?

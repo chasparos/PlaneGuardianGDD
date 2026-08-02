@@ -49,6 +49,13 @@ All notable documentation changes are recorded here.
   Plane-state and atmospheric presentation.
 - Added initial production guides for Floating Lands, Attachment Slots, and
   Plane-State Visual Language.
+- Approved the dual-authorship visual contract for Lands and attachments,
+  including off-color combinations such as a Verdant Oak on a Death Land.
+- Established real-time 3D detail budgeting: heightmap, silhouette, broad
+  materials, and reusable modular assets take priority over concept-art
+  microdetail.
+- Added decision DD-0020, the Land and Attachment production guide, three
+  approved attachment-state boards, and two Fire-biome exploration sheets.
 
 ## 0.1 - 2026-08-01
 

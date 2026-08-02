@@ -31,3 +31,4 @@ Each record should contain status, date, context, decision, rationale, consequen
 - [DD-0017 — Clock Ownership and Timeless Combat](DD-0017-clock-ownership-and-timeless-combat.md) — Accepted
 - [DD-0018 — Painted Astral Tabletop](DD-0018-painted-astral-tabletop.md) — Accepted
 - [DD-0019 — Java Platform and First Plane Flow](DD-0019-java-platform-and-first-plane-flow.md) — Accepted
+- [DD-0020 — 3D Land and Attachment Visual Contract](DD-0020-3d-land-and-attachment-visual-contract.md) — Accepted

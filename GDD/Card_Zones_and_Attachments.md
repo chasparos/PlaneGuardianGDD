@@ -1,8 +1,8 @@
 # Card Zones and Attachments
 
 - **Status:** Foundational design with provisional terminology and rates
-- **Related decision:** [DD-0015](../Decisions/DD-0015-card-zones-attachments-and-commitment.md)
-- **Related documents:** [PlaneGuardian GDD](PlaneGuardian_GDD.md), [Plane Economy and Operations](../Economy/Plane_Economy_and_Operations.md), [Combat and Raiding](Combat_and_Raiding.md)
+- **Related decisions:** [DD-0015](../Decisions/DD-0015-card-zones-attachments-and-commitment.md), [DD-0020](../Decisions/DD-0020-3d-land-and-attachment-visual-contract.md)
+- **Related documents:** [PlaneGuardian GDD](PlaneGuardian_GDD.md), [Plane Economy and Operations](../Economy/Plane_Economy_and_Operations.md), [Combat and Raiding](Combat_and_Raiding.md), [Land and Attachment Visual Contract](../Art/Production_Guides/Land_and_Attachment_Visual_Contract.md)
 
 ## Purpose
 
@@ -119,6 +119,22 @@ The guiding rule is:
 
 > Hard constraints establish coherent deployment. Soft modifiers and bonuses
 > establish strategy.
+
+## Visual attachment contract
+
+Legal attachments retain their card identity on every host. The attached card
+owns its primary 3D model, silhouette, dominant palette, materials, and native
+effects. The Land owns only the contact seam through bounded tint, decals,
+overlays, reflected light, and interaction effects.
+
+Semantic mismatch therefore remains visible. A Verdant Oak played on a Death
+Land stays alive and green; ash or pale lichen may gather at its roots without
+turning the entire attachment into an undead tree. The presentation reinforces
+the soft-compatibility rules instead of implying an unprinted hard restriction.
+
+The system should use reusable 3D models and host-blend masks rather than
+generating a bespoke model for every legal combination. See the production
+guide for the detail budget and validation contract.
 
 ## Lands as Plane-wide enablers
 

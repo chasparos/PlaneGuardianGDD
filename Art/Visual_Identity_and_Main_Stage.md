@@ -2,6 +2,7 @@
 
 - **Status:** Foundational art direction; first Main Stage direction approved
 - **Related decision:** [DD-0018](../Decisions/DD-0018-painted-astral-tabletop.md)
+- **Related production decision:** [DD-0020](../Decisions/DD-0020-3d-land-and-attachment-visual-contract.md)
 - **Related documents:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md), [Card Zones and Attachments](../GDD/Card_Zones_and_Attachments.md), [First Plane Onboarding](../GDD/First_Plane_Onboarding.md)
 
 ## Visual north star
@@ -41,6 +42,10 @@ and island boundaries remain crisp beneath any optional atmospheric blending.
 - Each important Plane metric receives a distinct visual channel.
 - Ordinary card and island art must be reproducible and pinned to a generator
   version.
+- Every world visual must ultimately exist as a real-time 3D asset or bounded
+  effect. Concept-art detail is not production authorization.
+- Spend geometry and effects first on heightmap, silhouette, material identity,
+  and gameplay-readable state. Small detail must earn its cost.
 
 ## Main Stage
 
@@ -150,6 +155,12 @@ Materials should feel illustrated. Metal may use deliberately painted
 highlights; vegetation uses clustered shapes rather than individual leaves;
 stone uses selected facets and cracks rather than photographic noise.
 
+The painted target is achieved primarily through shape hierarchy, material
+atlases, masks, controlled lighting, and restrained shader treatment. It should
+not depend upon sculpting every painted crack, root, leaf, pebble, vessel, or
+ornament. A concept may be visually richer than the final asset while still
+serving as a valid reference for mood and hierarchy.
+
 ## Affinity and semantic morphology
 
 Elemental Affinity influences form and motion:
@@ -191,6 +202,23 @@ Empty attachment slots appear in the island itself as small flat clearings,
 foundations, pedestals, or mounting plinths. Their material and shape may follow
 the biome, but a shared rim glyph or structural motif keeps the game function
 recognizable. A slot reads as unoccupied capacity, not as a prebuilt structure.
+
+### Attachment identity and host integration
+
+The [Land and Attachment Visual Contract](Production_Guides/Land_and_Attachment_Visual_Contract.md)
+uses dual authorship. The attached card owns its primary model, silhouette,
+materials, dominant palette, and native effects. The Land owns its terrain and
+the bounded seam where the object meets the host.
+
+Host integration may add contact tint, ash, moss, frost, roots, lichen, wet
+stone, reflected light, a ground decal, or one restrained interaction effect.
+It must not recolor or remodel the entire attachment. Off-color combinations
+are part of collection expression: a Verdant Oak remains green and alive when
+played on a Death Land.
+
+The working heuristic is that an attachment remains 80--90% visually itself,
+with 10--20% supplied by the integration seam. This is an ownership guideline,
+not a literal blend percentage.
 
 ## Plane-state channels
 
@@ -332,12 +360,25 @@ limited dynamic lights, cached procedural assemblies, and aggressive LOD and
 culling. Atmosphere and focal effects receive more rendering budget than raw
 polygon count.
 
+Detail is a budget, not a default. Dynamic lights, transparency, animated
+props, particles, unique meshes, dense foliage, and nested attachments multiply
+authoring and runtime cost. Use them where they communicate unique information
+at the gameplay camera; otherwise prefer painted texture, broader geometry,
+shared decals, instanced clusters, or omission.
+
+Production review must include the ordinary gameplay scale, solid silhouette,
+unlit materials, low-detail mode, effects-disabled mode, and both native and
+off-color attachment hosts. A visual that works only as a close concept render
+has not yet met the game-art requirement.
+
 ## First concept targets
 
 1. Main Stage with the Seed and first ring over the Void.
-2. One card shown across contrasting Rarity and Quality combinations.
-3. First summoning from empty Void into a Nascent Seed.
-4. One Seed identity shown at all four maturity stages.
+2. Land shown without a slot, with an empty slot, and with native and off-color
+   attachments.
+3. One card shown across contrasting Rarity and Quality combinations.
+4. First summoning from empty Void into a Nascent Seed.
+5. One Seed identity shown at all four maturity stages.
 
 The Main Stage concept must test whether UI, floating islands, bridges, cards,
 and the Void remain legible together.
@@ -346,6 +387,8 @@ and the Void remain legible together.
 
 - Final camera freedom, field of view, and zoom bands.
 - Initial biome, bridge, prop, and Seed component kit sizes.
+- Polygon, material, texture, draw-call, light, and particle budgets per zoom
+  band and hardware tier.
 - Exact Seed maturity requirements and whether names remain player-facing.
 - Rendering treatment required to achieve brush character without obscuring UI.
 - Low-spec reductions for particles, Void layers, and island state effects.

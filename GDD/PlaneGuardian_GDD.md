@@ -681,6 +681,14 @@ The jME3 client and pure Java NIO server support a Main-Stage onboarding flow
 whose domain-separated starter generation guarantees a Seed, coherent common
 cards, and a first Leader without post-processing hashes.
 
+## [DD-0020 --- 3D Land and Attachment Visual Contract](../Decisions/DD-0020-3d-land-and-attachment-visual-contract.md)
+
+Land and attachment visuals use dual authorship. Attached cards retain their
+model, silhouette, materials, palette, and native effects; the host supplies
+only a bounded integration seam. Real-time 3D production prioritizes heightmap,
+silhouette, broad materials, and reusable modular assets over concept-art
+microdetail.
+
 ------------------------------------------------------------------------
 
 # 15. Open Questions
