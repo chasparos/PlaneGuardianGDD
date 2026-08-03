@@ -4,6 +4,7 @@
 - **Related decision:** [DD-0020](../../Decisions/DD-0020-3d-land-and-attachment-visual-contract.md)
 - **Concept references:** [Land and Attachment Visual Contract Concepts](../Concepts/Land_Attachment_Contract/README.md)
 - **Related guides:** [Floating Lands](Floating_Lands.md), [Attachment Slots](Attachment_Slots.md), [Plane-State Visual Language](Plane_State_Language.md)
+- **Technical architecture:** [Semantic Procedural Asset Architecture](../../Technical/Semantic_Procedural_Asset_Architecture.md)
 
 ## Purpose
 
@@ -84,6 +85,13 @@ The exact implementation remains technical work. A likely jME3 approach uses
 vertex color or a small mask texture for host blending, material parameters for
 the sampled host palette, a projected contact decal, reusable overlay meshes,
 and separate lightweight VFX attached to named sockets.
+
+Procedural assets expose stable semantic roles, variant groups, masks, and
+sockets. A CPU-side resolver and asset-family adapter separate structural
+generation from material response: leafless vegetation omits foliage geometry,
+while palette, dryness, roughness, and bounded host tint remain material
+concerns. Shaders consume resolved parameters and preserve jME PBR lighting;
+they do not independently interpret every Lore Map wheel.
 
 ## Visual cue budget
 

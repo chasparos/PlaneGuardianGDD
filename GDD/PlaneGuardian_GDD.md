@@ -127,6 +127,15 @@ affinity, cooldown, and unique status.
 See [Visual Identity and Main
 Stage](../Art/Visual_Identity_and_Main_Stage.md).
 
+Procedural visuals use a versioned semantic-resolution pipeline. The complete
+Lore Map is resolved on the CPU into a compact visual profile, then interpreted
+by asset-family adapters as geometry, material, and VFX recipes. Biomes provide
+coherent island construction grammars but retain continuous semantic variation.
+Materials consume resolved palettes and bounded parameters while preserving
+jME PBR lighting; they do not independently interpret all six wheels. See
+[Semantic Procedural Asset
+Architecture](../Technical/Semantic_Procedural_Asset_Architecture.md).
+
 ------------------------------------------------------------------------
 
 # 5. Core Systems
@@ -688,6 +697,13 @@ model, silhouette, materials, palette, and native effects; the host supplies
 only a bounded integration seam. Real-time 3D production prioritizes heightmap,
 silhouette, broad materials, and reusable modular assets over concept-art
 microdetail.
+
+## [DD-0021 --- Semantic Procedural Asset Runtime](../Decisions/DD-0021-semantic-procedural-asset-runtime.md)
+
+Card semantics resolve through a versioned CPU-side visual profile and
+asset-family adapters into geometry, material, and VFX recipes. Declarative
+glTF metadata is paired with trusted compiled generators, jME PBR lighting is
+preserved, and the Deciduous Great Tree is the first reference implementation.
 
 ------------------------------------------------------------------------
 

@@ -2,7 +2,7 @@
 
 - **Status:** Foundational design
 - **Related decisions:** [DD-0002](../Decisions/DD-0002-semantic-lore-map.md), [DD-0006](../Decisions/DD-0006-elemental-affinity-wheel.md), [DD-0011](../Decisions/DD-0011-manifestation-wheel.md), [DD-0012](../Decisions/DD-0012-magical-tradition-wheel.md), [DD-0013](../Decisions/DD-0013-cosmic-provenance-and-cosmology.md)
-- **Related document:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md)
+- **Related documents:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md), [Semantic Procedural Asset Architecture](../Technical/Semantic_Procedural_Asset_Architecture.md)
 
 ## Purpose
 
@@ -230,6 +230,22 @@ Complexity determines how many dominant influences become visible:
 - exceptional cards may express multiple poles or explicit tensions.
 
 Low-ranked coordinates may still guide minor statistics or visual details without appearing in the card's name or primary ability.
+
+## Visual resolution boundary
+
+The complete Lore Map remains the source for procedural visual identity, but
+individual materials and shaders do not interpret it independently. A
+versioned CPU-side resolver combines Salience, card-family relevance, context,
+Complexity, and center relationships into a compact visual profile. Asset-family
+adapters then translate that profile into geometry, material, and VFX recipes.
+
+All six wheels remain available. Natural Lands normally give the strongest
+direct visual weight to Elemental Affinity, Ethos, and Manifestation. World
+Relation modifies preservation, mutation, creation, and absence; Magical
+Tradition becomes prominent for overt magic and constructed forms; Cosmic
+Provenance remains conditional unless the card is explicitly divine or
+infernal. See [Semantic Procedural Asset
+Architecture](../Technical/Semantic_Procedural_Asset_Architecture.md).
 
 ## Procedural naming
 

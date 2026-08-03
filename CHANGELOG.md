@@ -56,6 +56,15 @@ All notable documentation changes are recorded here.
   microdetail.
 - Added decision DD-0020, the Land and Attachment production guide, three
   approved attachment-state boards, and two Fire-biome exploration sheets.
+- Defined a versioned CPU-side semantic-to-visual pipeline that separates
+  geometry, PBR material parameters, and VFX recipes.
+- Established declarative glTF asset roles, semantic masks, variant groups,
+  named deterministic substreams, and layered semantic biome generation.
+- Paired the asset data library with a trusted compiled generator runtime while
+  deferring unrestricted scripts, runtime bytecode generation, and hot-loaded
+  asset code.
+- Selected the Deciduous Great Tree as the first procedural-asset reference
+  generator and added decision DD-0021.
 
 ## 0.1 - 2026-08-01
 

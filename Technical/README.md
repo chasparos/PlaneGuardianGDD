@@ -7,3 +7,4 @@ experiments separate from foundational design decisions.
 ## Documents
 
 - [Client and Server Architecture](Client_Server_Architecture.md)
+- [Semantic Procedural Asset Architecture](Semantic_Procedural_Asset_Architecture.md)

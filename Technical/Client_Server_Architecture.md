@@ -2,7 +2,7 @@
 
 - **Status:** Foundational platform direction; detailed implementation remains open
 - **Related decision:** [DD-0019](../Decisions/DD-0019-java-platform-and-first-plane-flow.md)
-- **Related documents:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md), [Time, Combat, and Cross-Plane Effects](../GDD/Time_Combat_and_Cross_Plane_Effects.md), [First Plane Onboarding](../GDD/First_Plane_Onboarding.md)
+- **Related documents:** [PlaneGuardian GDD](../GDD/PlaneGuardian_GDD.md), [Time, Combat, and Cross-Plane Effects](../GDD/Time_Combat_and_Cross_Plane_Effects.md), [First Plane Onboarding](../GDD/First_Plane_Onboarding.md), [Semantic Procedural Asset Architecture](Semantic_Procedural_Asset_Architecture.md)
 
 ## Target platform
 
@@ -44,6 +44,14 @@ systems include:
 
 The server sends authoritative identity, rules, mutable state, and approved
 presentation overrides rather than transmitting generated ordinary artwork.
+
+Card semantics are converted into geometry, material, and VFX recipes through
+a versioned CPU-side visual resolver and asset-family adapters. Shaders receive
+resolved palettes and bounded render parameters rather than interpreting the
+complete Lore Map. The paired asset data library and trusted generator runtime
+are pinned client dependencies; dynamically loaded generator code remains a
+future signed-update concern. See [Semantic Procedural Asset
+Architecture](Semantic_Procedural_Asset_Architecture.md).
 
 ## Server execution shape
 
