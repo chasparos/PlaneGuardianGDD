@@ -39,10 +39,10 @@
 ## Elevator Pitch
 
 **PlaneGuardian** is a persistent high fantasy card collection and
-world-building game where every card is procedurally generated from one
-or more globally unique identifiers (GUIDs). Players discover magical
-artifacts in the form of cards and assemble them into living Pocket
-Planes that evolve over real time.
+world-building game where every realised card is procedurally generated from
+one or more globally unique identifiers (GUIDs). Players locate fragments of
+shattered reality, activate them into magical cards, and assemble those cards
+into living Pocket Planes that evolve over real time.
 
 The game emphasizes discovery, creativity, and long-term progression
 rather than traditional deck-versus-deck battles.
@@ -75,7 +75,11 @@ Finding a new card should always be exciting.
 
 # 3. Core Gameplay Loop
 
-Acquire Cards
+Locate Fragments
+
+↓
+
+Activate Fragments
 
 ↓
 
@@ -102,9 +106,15 @@ Repeat
 # 4. The World
 
 Players are **Plane Guardians**, beings capable of stabilizing fragments
-of magical reality.
+of magical reality. The game opens with a whisper—**“Awaken, Guardian.”** The
+newly awakened Guardian finds the Void as the shattered, almost dead remains
+of a multiverse, receives an unsprouted Planar Seed, and is tasked with
+growing it into a plane of reality.
 
-Each fragment manifests as a magical card.
+Fragments survive as diverse crystals with visualised semantic profiles.
+Retrieving or locating a fragment does not yet create a card: activation
+through a ritual, spell, craft, or other resource-consuming process realises
+the deterministic card.
 
 By arranging these fragments around a Plane Seed, Guardians cultivate
 persistent Pocket Planes.
@@ -145,6 +155,7 @@ Architecture](../Technical/Semantic_Procedural_Asset_Architecture.md).
 -   Plane Construction
 -   Resource Economy
 -   Action Deck
+-   Fragment Discovery and Activation
 -   Persistent Simulation
 
 ------------------------------------------------------------------------
@@ -282,12 +293,13 @@ and Magma derive from multiple affinities. Physical and Spiritual are
 effect-delivery modes rather than elements; Poison, Disease, and Decay
 are generated effect families rather than foundational sectors.
 
-## Origins and Discovery Sources
+## Fragment Origins and Discovery Sources
 
-Players discover cards by supplying sources such as summoning phrases,
-locations, crafted formulas, divinations, or arbitrary text. The same
-canonical source and source type resolve to the same card during an Era
-while copies remain available.
+Players locate fragments by supplying leads such as phrases, locations,
+crafted formulas, divinations, or arbitrary text. The same canonical source
+and source type resolve to the same latent fragment during an Era while
+copies remain available. A fragment becomes a realised card only after a
+separate activation process.
 
 The server protects the mapping from source text to Origin ID so players
 cannot mine desirable cards offline. The Origin ID still reconstructs
@@ -295,11 +307,15 @@ the complete card deterministically. A separate authoritative ledger
 enforces global supply and per-account copy limits.
 
 Knowledge of a productive source may be shared with friends or guilds.
-An exhausted source can no longer issue copies, including after a unique
-card has been claimed.
+An exhausted source can no longer issue fragments, including after a unique
+fragment has been claimed. Activation still consumes its defined resources
+and cannot bypass supply limits.
 
 See [Card Origins and Protected
 Discovery](../Procedural/Card_Origins_and_Protected_Discovery.md).
+
+See [Fragment Discovery and
+Activation](Fragment_Discovery_and_Activation.md).
 
 ## Creative Layer
 
@@ -423,7 +439,8 @@ Examples:
 -   Expeditions
 -   Resource rituals
 -   Time acceleration
--   Exploration
+-   Locate or retrieve a fragment
+-   Activate a fragment
 -   Combat
 -   Diplomacy
 
@@ -542,10 +559,10 @@ Persistent storage should contain only mutable state such as ownership,
 cooldowns, inventories, and timestamps.
 
 The client flow is Splash, Loading, Login or Account Creation, Game Menu, and
-Main Stage. First-Plane onboarding occurs inside the Main Stage through Seed
-summoning, a semantic questionnaire, a coherent common starter collection,
-and a special Action that generates a slightly higher-Quality Hero with
-Leader.
+Main Stage. First-Plane onboarding occurs inside the Main Stage through the Guardian's
+awakening, Seed revelation, fragment retrieval and activation, a semantic
+questionnaire, a coherent common starter collection, and a special Action
+that realises a slightly higher-Quality Hero with Leader.
 
 Starter families are selected through authoritative domain-separated
 generation contexts rather than by modifying completed hash bytes.
@@ -594,8 +611,9 @@ Mechanics, names, art, and lore consume one versioned semantic profile.
 
 ## [DD-0003 --- Protected Source-Based Discovery](../Decisions/DD-0003-protected-source-discovery.md)
 
-Player-provided sources map to deterministic cards through a protected,
-server-authoritative origin process.
+Player-provided leads map to latent fragments and their deterministic cards
+through a protected, server-authoritative origin process; activation realises
+the card and consumes its defined process and resources.
 
 ## [DD-0004 --- Universes, Eras, and Eternal Cards](../Decisions/DD-0004-universes-eras-and-eternal-cards.md)
 

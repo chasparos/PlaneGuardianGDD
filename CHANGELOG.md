@@ -40,7 +40,7 @@ All notable documentation changes are recorded here.
 - Defined the painted astral-tabletop visual identity, floating hex islands, adaptive Main Stage, and distinct card-frame channels.
 - Defined modular Seed maturity with permanent silhouettes and transient power, Stability, prosperity, size, and affinity presentation.
 - Established the jME3 client, pure Java NIO TCP server, development H2 persistence, application flow, and first-Plane onboarding.
-- Defined domain-separated starter generation and the first Leader summoning sequence.
+- Defined domain-separated starter generation and the first Leader activation sequence.
 - Added design decisions DD-0018 and DD-0019 plus Art, onboarding, and Technical specifications.
 - Replaced the removed patch helper workflow with direct line-ending-tolerant Git and snapshot commands.
 - Approved and added the first Main Stage visual-direction concept.
@@ -65,6 +65,9 @@ All notable documentation changes are recorded here.
   asset code.
 - Selected the Deciduous Great Tree as the first procedural-asset reference
   generator and added decision DD-0021.
+- Added the provisional Fragment of Reality lifecycle: Guardians locate latent
+  crystal fragments in the Void and activate them into realised cards, with
+  onboarding and discovery terminology updated to match.
 
 ## 0.1 - 2026-08-01
 

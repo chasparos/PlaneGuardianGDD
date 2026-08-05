@@ -6,7 +6,10 @@
 
 ## Purpose
 
-Players discover cards by supplying a meaningful or arbitrary source, such as a summoning phrase, a location to search, a divination, a crafted formula, or free text. Repeating the same source within the same context must resolve to the same card while copies remain available.
+Players locate fragments of reality by supplying a meaningful or arbitrary
+lead, such as a location, divination, crafted formula, quest prompt, or free
+text. A lead may also be phrased as an intention or incantation, but finding a
+fragment is not the same event as realising its card.
 
 The mapping must not permit players or bots to enumerate billions of candidate phrases offline in search of optimal cards.
 
@@ -17,11 +20,14 @@ Player source
   -> canonical source
   -> protected source mapping
   -> Origin ID
+  -> latent fragment claim
+  -> activation process
   -> deterministic card definition
-  -> supply claim
+  -> realised-card supply claim
 ```
 
-Source type is part of the mapping. The same words used as a location and as a summoning phrase may therefore resolve to different cards.
+Source type is part of the mapping. The same words used as a location and as
+an incantation may therefore resolve to different fragments.
 
 Canonicalization should make intentional sharing practical while preventing invisible variants. The initial policy should include Unicode normalization, removal of control characters, surrounding whitespace removal, repeated-whitespace collapse, and invariant case folding. Whether punctuation is significant remains an implementation detail.
 
@@ -45,9 +51,17 @@ Card definition and card supply are separate. The supply ledger records:
 - numbered copy identities;
 - discovery and ownership provenance.
 
-A discovery claim must atomically resolve the source, reconstruct the card, enforce the account limit, enforce global supply, issue a copy, and record the event. Once a unique card has been issued, later seekers may learn that the source was claimed but cannot receive another copy.
+A discovery claim atomically resolves the source and records the latent
+fragment. Activation then resolves the card, enforces the account limit and
+global supply, issues the realised copy, and records the activation event.
+These operations may be combined for a simple Action, but the design must
+retain the conceptual distinction and must never let activation bypass supply
+limits. Once a unique fragment or realised card has been claimed, later
+seekers may learn that the source was claimed but cannot receive another copy.
 
-Sources are shareable knowledge. A player who finds a desirable limited card may deliberately share its source with friends or guild members, creating exploration rumors and limited magical gold rushes.
+Leads are shareable knowledge. A player who finds a desirable limited
+fragment may deliberately share its source with friends or guild members,
+creating exploration rumors and limited magical gold rushes.
 
 ## Universes and Eras
 

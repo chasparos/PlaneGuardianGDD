@@ -46,7 +46,7 @@ metric from becoming another brightness or color effect.
 ## Consequences
 
 - The first concept work should test the Main Stage, card-frame separation, and
-  Seed summoning before expanding the asset library.
+  Seed awakening and fragment activation before expanding the asset library.
 - Camera freedom, geometry, lighting, and materials should support a composed
   diorama rather than unrestricted realism.
 - Seed growth requires modular cores, foundations, crowns, anchors, halos, and
