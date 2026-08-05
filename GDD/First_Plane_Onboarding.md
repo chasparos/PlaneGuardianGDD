@@ -42,7 +42,7 @@ character-creation wizard.
 4. Reveal and entrust the unsprouted Planar Seed and its Rift.
 5. Locate the first fragments as crystals.
 6. Ask a short evocative semantic questionnaire.
-7. Activate a coherent common starter collection.
+7. Activate the located starter fragments into a coherent common collection.
 8. Teach placement with the first Lands and visible affinity contribution.
 9. Grant a special first-Leader fragment activation Action.
 10. Realise a slightly higher-Quality Hero guaranteed to have Leader.

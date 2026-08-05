@@ -16,7 +16,7 @@ survived the shattering. Each fragment appears as a diverse crystal whose
 visual form previews its semantic profile. A fragment is not yet a card. It
 becomes a realised card only when the Guardian activates it.
 
-This distinction makes finding and making meaningful actions rather than
+This distinction makes finding and activating meaningful actions rather than
 instantaneous card delivery:
 
 ```text
