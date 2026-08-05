@@ -377,7 +377,7 @@ has not yet met the game-art requirement.
 2. Land shown without a slot, with an empty slot, and with native and off-color
    attachments.
 3. One card shown across contrasting Rarity and Quality combinations.
-4. First summoning from empty Void into a Nascent Seed.
+4. First fragment activation from the empty Void into a Nascent Seed.
 5. One Seed identity shown at all four maturity stages.
 
 The Main Stage concept must test whether UI, floating islands, bridges, cards,

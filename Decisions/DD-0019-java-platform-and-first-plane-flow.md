@@ -26,10 +26,10 @@ Splash -> Loading -> Login or Account Creation -> Game Menu -> Main Stage
 ```
 
 A new account enters first-Plane onboarding within the Main Stage. The player
-receives a short setting introduction, summons a Planar Seed, answers a small
-semantic questionnaire, receives a coherent common starter collection, and
-uses a special Action to summon a slightly higher-Quality Hero guaranteed to
-have Leader.
+receives the “Awaken, Guardian” setting introduction, is entrusted with an
+unsprouted Planar Seed, answers a small semantic questionnaire, locates and
+activates a coherent common starter collection, and uses a special Action to
+realise a slightly higher-Quality Hero guaranteed to have Leader.
 
 Starter families are selected by an authoritative versioned generation
 context. Independent domain-separated random streams derive family,

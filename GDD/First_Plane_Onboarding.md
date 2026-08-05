@@ -7,9 +7,10 @@
 ## Purpose
 
 The first session should teach PlaneGuardian by making the central fantasy
-happen visibly: an empty Void receives a Seed, the player's choices give the
-new Plane direction, cards become islands, and a first Leader answers the
-emerging world.
+happen visibly: a whisper awakens the Guardian, an empty Void reveals an
+unsprouted Seed, fragments become cards through activation, the player's
+choices give the new Plane direction, cards become islands, and a first
+Leader answers the emerging world.
 
 ## Application flow
 
@@ -36,15 +37,16 @@ character-creation wizard.
 ## First Plane sequence
 
 1. Present an empty dark Void.
-2. Give a short account of Plane Guardians and unstable fragments of reality.
-3. Perform the Planar Seed summoning.
-4. Reveal the central Seed and its Rift.
-5. Ask a short evocative semantic questionnaire.
-6. Generate a coherent common starter collection.
-7. Teach placement with the first Lands and visible affinity contribution.
-8. Grant a special first-Leader summoning Action.
-9. Generate a slightly higher-Quality Hero guaranteed to have Leader.
-10. Introduce the next immediate Plane objective.
+2. Play the whisper: “Awaken, Guardian.”
+3. Give a short account of the shattered multiverse and unstable fragments.
+4. Reveal and entrust the unsprouted Planar Seed and its Rift.
+5. Locate the first fragments as crystals.
+6. Ask a short evocative semantic questionnaire.
+7. Activate the located starter fragments into a coherent common collection.
+8. Teach placement with the first Lands and visible affinity contribution.
+9. Grant a special first-Leader fragment activation Action.
+10. Realise a slightly higher-Quality Hero guaranteed to have Leader.
+11. Introduce the next immediate Plane objective.
 
 The sequence should remain brisk and revisitable. Narrative presentation must
 not conceal the mechanical consequences of choices after they are made.
@@ -102,10 +104,10 @@ If future reconstruction requires family to be encoded in a standalone GUID,
 versioned reserved type bits may be assigned before filling the remaining bits
 cryptographically. Post-hash XOR is not the default design.
 
-## First Leader summoning
+## First Leader activation
 
-The special Action provisionally represents summoning the Plane's first
-Warden. Inputs include:
+The special Action provisionally represents activating a fragment into the
+Plane's first Warden. Inputs include:
 
 - Planar Seed profile;
 - questionnaire profile;
